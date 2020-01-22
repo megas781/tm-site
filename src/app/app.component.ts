@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import {AfterViewChecked, AfterViewInit, Component} from '@angular/core';
+import {TweenLite} from "gsap";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

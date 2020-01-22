@@ -1,23 +1,32 @@
+/* usual and condensed versions */
+
 @font-face {
   font-family: DIN Pro;
+  font-weight: 400;
+  src: url("../assets/fonts/DIN_Pro/dinpro-regular.ttf");
+}
+
+/* condensed */
+@font-face {
+  font-family: DIN Pro Condensed;
   font-stretch: condensed;
   font-weight: 300;
   src: url(../assets/fonts/DIN_Pro/dinpro-condensed-light.otf) format("opentype");
 }
 @font-face {
-  font-family: DIN Pro;
+  font-family: DIN Pro Condensed;
   font-stretch: condensed;
   font-weight: 400;
   src: url(../assets/fonts/DIN_Pro/dinpro-condensed-regular.otf) format("opentype");
 }
 @font-face {
-  font-family: DIN Pro;
+  font-family: DIN Pro Condensed;
   font-stretch: condensed;
   font-weight: 500;
   src: url(../assets/fonts/DIN_Pro/dinpro-condensed-medium.otf) format("opentype");
 }
 @font-face {
-  font-family: DIN Pro;
+  font-family: DIN Pro Condensed;
   font-stretch: condensed;
   font-weight: 700;
   src: url(../assets/fonts/DIN_Pro/dinpro-condensed-bold.otf) format("opentype");

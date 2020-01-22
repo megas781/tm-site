@@ -1,0 +1,45 @@
+.intro {
+  position: relative;
+}
+.intro__image {
+  margin: 0 auto;
+  display: block;
+  padding: 100px 100px 120px;
+  height: 285px;
+  width: 300px;
+}
+.intro__arrow-down {
+  background-image: url("src/assets/images/black-arrow-down.png");
+  display: block;
+  width: 30px;
+  height: 16px;
+  background-size: contain;
+  cursor: pointer;
+  margin: 0 auto 16px;
+}
+
+
+.slogan-part {
+  background-image: url("src/assets/images/slogan-photo-colored.png");
+  background-size: cover;
+  color: white;
+  font-family: "DIN Pro Condensed";
+}
+.slogan-part__body {
+  margin: 0 auto;
+  padding: 150px 0;
+  width: 600px;
+}
+
+.slogan-part__text-1 {
+  text-align: left;
+  font-size: 44px;
+}
+.slogan-part__text-2 {
+  text-align: center;
+  font-size: 32px;
+}
+.slogan-part__text-3 {
+  text-align: right;
+  font-size: 33px;
+}

@@ -2,6 +2,15 @@
 @import "dinpro.css";
 body {
   margin: 0;
-  font-family: "DIN Pro";
+  font-family: "DIN Pro", sans-serif;
   font-weight: 400;
+  /*font-size: 20px;*/
+}
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+a:hover {
+  cursor: pointer !important;
 }
