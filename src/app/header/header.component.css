@@ -30,5 +30,22 @@ header .container {
 }
 
 .nav-link {
+  text-decoration: none;
+  position: relative;
+}
 
+.nav-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 0;
+  background-color: #551a8b;
+  left: 0;
+  bottom: 0;
+  transition: width 0.5s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }

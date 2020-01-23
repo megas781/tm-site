@@ -1,5 +1,9 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {TweenLite} from 'gsap';
+import {TweenLite, TimelineMax, TweenMax, TimelineLite} from 'gsap';
+
+// import * as ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
+// import 'script-loader!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 @Component({
   selector: 'app-main-page',
@@ -14,9 +18,22 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   }
 
+
+  // ctrl = new ScrollMagic.Controller();
+
   ngAfterViewInit(): void {
     //анимации
-    TweenLite.from(document.querySelector('.intro__image'), 2.5, {ease: "power2.out",scale: '0.9', opacity: 1});
+    // new ScrollMagic.Scene({
+    //   triggerElement: '.slogan-part__body',
+    //   triggerHook: 0
+    // })
+    //   .setTween(TweenLite.from(document.querySelector('.slogan-part__body'), 1, {y: 50, opacity: 0}))
+    //   .addTo(this.ctrl);
+
+
+    TweenLite.from(document.querySelector('.intro__image'), 3, {opacity: 0, scale: 0.9, delay: 1.0});
+    console.log('scrollmagic');
+
   }
 
 }
