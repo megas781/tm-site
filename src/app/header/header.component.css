@@ -6,6 +6,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -48,4 +49,46 @@ header .container {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.burger-button {
+  display: none;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 4px;
+  cursor: pointer;
+  right: 8px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/280px-Hamburger_icon.svg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 94%;
+  }
+
+  .burger-button {
+    display: block;
+  }
+  .nav-link {
+    display: block;
+    padding: 8px 6px;
+  }
+  .nav-link::after {
+    display: none;
+  }
+  .nav-item:not(:last-child) {
+    border-bottom: 1px solid darkblue;
+  }
+  .nav.mobileNavHide {
+    display: none;
+  }
 }

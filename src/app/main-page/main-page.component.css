@@ -4,7 +4,7 @@
 .intro__image {
   margin: 0 auto;
   display: block;
-  padding: 120px 100px 140px;
+  padding: 120px 0px 140px;
   height: 285px;
   width: 300px;
 }
@@ -22,6 +22,7 @@
 .slogan-part {
   background-image: url("src/assets/images/slogan-photo-colored.png");
   background-size: cover;
+  background-position: center;
   color: white;
   /*font-weight: 300;*/
   font-family: "DIN Pro Condensed";
@@ -29,7 +30,7 @@
 .slogan-part__body {
   margin: 0 auto;
   padding: 150px 0;
-  width: 600px;
+  max-width: 600px;
 }
 .slogan-part__text {
   padding: 8px;
@@ -76,15 +77,16 @@
 
 }
 .talent-list {
-  /*display: flex;*/
-  /*align-items: flex-start;*/
-  /*justify-content: space-between;*/
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /*grid-template-columns: ;*/
+  grid-auto-columns: auto;
+  grid-template-columns: repeat(auto-fit, 180px);
+  justify-content: space-around;
   grid-gap: 24px;
   max-width: 900px;
   margin: 60px auto 0;
 }
+
 
 .talent {
   display: flex;
@@ -175,6 +177,8 @@
 }
 
 
+
+
 .invitation {
   padding: 100px 0;
   height: 200px;
@@ -261,4 +265,21 @@
   width: 100%;
   height: 100%;
   opacity: 0.0;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+    height: auto;
+  }
+  .slide__left-side {
+    width: auto;
+    /*height: 240px;*/
+  }
+  .slider__right-side {
+    width: auto;
+    height: 300px;
+  }
+
+
 }
