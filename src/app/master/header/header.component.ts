@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   theWindow: Window;
-  shouldHideMobileNav: boolean = false;
+  shouldHideMobileNav: boolean = true;
   ngOnInit() {
     this.theWindow = window;
     console.log('thewindow: ' + window);
@@ -18,8 +18,6 @@ export class HeaderComponent implements OnInit {
 
   burgerButtonTapped() {
     this.shouldHideMobileNav = !this.shouldHideMobileNav;
-    // console.log('window.innerWidth:');
-    // console.log(window.innerWidth);
   }
 
 }
