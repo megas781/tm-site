@@ -1,5 +1,5 @@
 footer {
-  background-color: #A14DB6;
+  background: linear-gradient(to bottom, violet, #A14DB6 );
   color: white;
   padding: 20px 0;
 }
