@@ -26,6 +26,7 @@
   color: white;
   /*font-weight: 300;*/
   font-family: "DIN Pro Condensed";
+  height: 530px;
 }
 .slogan-part__body {
   margin: 0 auto;
@@ -61,8 +62,9 @@
   z-index: 1;
   color: white;
   font-size: 30px;
-  background-color: #C35C63;
+  background:linear-gradient(to left, rgb(197, 116, 122) 20%, rgb(190, 58, 67));
   padding: 8px 16px;
+  
 }
 .talents__title::before {
   content: '';
@@ -72,9 +74,9 @@
   right: 0;
   height: 100%;
   width: 1000px;
-  background-color: #C35C63;
+  background:linear-gradient(to left, rgb(197, 94, 101) 20%, rgb(179, 41, 50));
   z-index: -1;
-
+  box-shadow: 4px 4px 9px rgba(122, 122, 122, 0.322);
 }
 .talent-list {
   display: grid;
@@ -98,13 +100,13 @@
 }
 .talent__circle {
   border-radius: 50%;
-  background-color: #F539AD;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 180px;
   width: 180px;
 }
+
 .talent__image {
   transform: scale(0.8);
 }
@@ -113,6 +115,7 @@
   text-align: center;
   font-size: 22px;
   font-weight: 400;
+  text-shadow: 2px 2px 3px rgba(122, 122, 122, 0.3);
 }
 
 
@@ -124,6 +127,7 @@
   text-align: center;
   margin-top: 24px;
   font-family: "DIN Pro Condensed";
+  text-shadow: 2px 2px 3px rgba(122, 122, 122, 0.3);
 }
 .slider {
 
@@ -193,7 +197,7 @@
 }
 .invitation__title {
   color: white;
-  background-color: #C35C63;
+  background:linear-gradient(to right, rgb(197, 94, 101) 20%, rgb(179, 41, 50));
   padding: 8px;
   display: inline-block;
   position: relative;
@@ -208,7 +212,7 @@
   left: 0;
   height: 100%;
   width: 2000px;
-  background-color: #C35C63;
+  background:linear-gradient(to right, rgb(197, 94, 101) 20%, rgb(179, 41, 50));
   z-index: -1;
 }
 .invitation__link-container {
