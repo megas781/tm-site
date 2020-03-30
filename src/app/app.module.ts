@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './master/header/header.component';
@@ -11,6 +11,7 @@ import { GalleryPageComponent } from './gallery-page/gallery-page.component';
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 import { MembersPageComponent } from './members-page/members-page.component';
 import { ContactsPageComponent } from './contacts-page/contacts-page.component';
+import { NgwWowModule } from 'ngx-wow';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { ContactsPageComponent } from './contacts-page/contacts-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NgwWowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

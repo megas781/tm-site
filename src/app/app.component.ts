@@ -1,5 +1,6 @@
-import {AfterViewChecked, AfterViewInit, Component} from '@angular/core';
-import {TweenLite} from "gsap";
+import { AfterViewChecked, AfterViewInit, Component } from '@angular/core';
+import { TweenLite } from "gsap";
+import { NgwWowService } from 'ngx-wow';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,8 @@ import {TweenLite} from "gsap";
 })
 export class AppComponent {
   title = 'tm-site';
+  constructor(private wowService: NgwWowService) {
+    this.wowService.init();
+  }
 }
+
