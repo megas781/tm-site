@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import "dinpro.css";
+/*@import "dinpro.css";*/
+@import "../assets/fonts/Gilroy/stylesheet.css";
 body {
   margin: 0;
-  font-family: "DIN Pro", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-weight: 400;
   /*font-size: 20px;*/
 }

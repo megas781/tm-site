@@ -8,8 +8,8 @@ import { NgwWowService } from 'ngx-wow';
 })
 export class AppComponent {
   title = 'tm-site';
-  constructor(private wowService: NgwWowService) {
-    this.wowService.init();
+  constructor() {
+
   }
 }
 
