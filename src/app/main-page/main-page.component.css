@@ -80,6 +80,35 @@
 
 @media all and (max-width: 768px) {
   .activities__list {
-
+    flex-direction: column;
   }
+}
+
+
+.you-can-section {
+
+}
+
+.you-can__body {
+
+}
+
+.you-can__title {
+
+}
+
+.you-can__split-view {
+
+}
+.split-view__text-side {
+
+}
+.split-view__parah {
+
+}
+.split-view__image-side {
+
+}
+.split-view__image {
+
 }
