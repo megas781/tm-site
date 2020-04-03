@@ -1,9 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 /*@import "dinpro.css";*/
 @import "../assets/fonts/Gilroy/stylesheet.css";
+:root {
+  --red: #C35F67;
+}
 body {
   margin: 0;
   font-family: "Gilroy", sans-serif;
+  /*font-family: "DIN Pro", sans-serif;*/
   font-weight: 400;
   /*font-size: 20px;*/
 }
@@ -14,7 +18,7 @@ body {
 }
 
 a:hover {
-  cursor: pointer !important;
+  /*cursor: pointer !important;*/
 }
 
 .text-centering {

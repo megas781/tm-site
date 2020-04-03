@@ -1,17 +1,38 @@
 .intro-section {
   position: relative;
+  /*height: 100vh;*/
+  height: calc(100vh - 56px); /*56px - height of the header*/
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__body {
+  max-width: 640px;
+  margin: 0 auto;
 }
 .intro__image {
-  margin: 0 auto;
-  display: block;
-
+  width: 100%;
 }
+
+.intro__greeting {
+  font-weight: 300;
+  font-size: 36px;
+  text-align: center;
+  color: var(--red);
+}
+
 .intro__arrow-down {
   background-image: url("src/assets/images/black-arrow-down.png");
   display: block;
   width: 30px;
   height: 16px;
   background-size: contain;
-  /*cursor: pointer;*/
-  margin: 0 auto 16px;
+  /*margin: 0 auto 16px;*/
+  margin: 0 auto;
+  position: absolute;
+  bottom: 16px;
+
 }
