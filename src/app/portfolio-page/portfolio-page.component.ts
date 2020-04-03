@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-portfolio-page',
@@ -10,6 +11,9 @@ export class PortfolioPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
+
   }
 
 }

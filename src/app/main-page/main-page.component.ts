@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {TweenLite, TimelineMax, TweenMax, TimelineLite} from 'gsap';
+import Swiper from 'swiper';
 
 
 // import * as ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
@@ -17,6 +18,21 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+
+    var swiper = new Swiper('.activities-swiper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 'auto',
+      spaceBetween: 32,
+      freeMode: true,
+      autoplay: {
+        delay: 3000,
+      },
+      // loop: true
+    });
+
   }
 
 

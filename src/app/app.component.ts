@@ -1,6 +1,7 @@
 import { AfterViewChecked, AfterViewInit, Component } from '@angular/core';
 import { TweenLite } from "gsap";
-import { NgwWowService } from 'ngx-wow';
+import Swiper from 'swiper';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

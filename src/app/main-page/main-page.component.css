@@ -34,5 +34,52 @@
   margin: 0 auto;
   position: absolute;
   bottom: 16px;
+}
 
+
+/* Section 2: ACTIVITIES */
+.activities-section {
+  background-size: cover;
+  background: url("../../assets/images/images-by-nastya/sec-2-fon.jpg") no-repeat center;
+  /*height: 100vh;*/
+  color: #E4F3FF;
+  text-align: center;
+  padding: 16px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*flex-direction: ;*/
+}
+.activities__text {
+  font-size: 35px;
+}
+.activities__list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.activity {
+  font-size: 24px;
+  padding: 0 24px;
+  margin-bottom: 8px;
+}
+
+.activities-swiper {
+  width: 100%;
+}
+.activity-slide {
+  height: 240px;
+  width: 320px;
+}
+.activity-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media all and (max-width: 768px) {
+  .activities__list {
+
+  }
 }
