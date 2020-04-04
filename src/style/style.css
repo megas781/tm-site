@@ -3,6 +3,8 @@
 @import "../assets/fonts/Gilroy/stylesheet.css";
 :root {
   --red: #C35F67;
+  --light-blue: #E4F3FF;
+  --light-purple: #FECFFE;
 }
 body {
   margin: 0;

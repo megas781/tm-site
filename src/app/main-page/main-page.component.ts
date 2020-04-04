@@ -33,6 +33,14 @@ export class MainPageComponent implements OnInit, AfterViewInit {
       // loop: true
     });
 
+
+    var youCanSwiper = new Swiper('.split-view__image-side > .swiper-container', {
+      autoplay: {
+        delay: 4000
+      },
+      // effect: 'fade',
+    })
+
   }
 
 
