@@ -41,6 +41,27 @@ export class MainPageComponent implements OnInit, AfterViewInit {
       // effect: 'fade',
     })
 
+
+    var ourPlaysSwiper = new Swiper( '.our-plays__swiper', {
+      breakpoints: {
+        0: {
+          slidesPerView: 2
+        },
+        769: {
+          slidesPerView: 3
+        }
+      },
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      spaceBetween: 32,
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.our-plays__swiper .swiper-button-next',
+        prevEl: '.our-plays__swiper .swiper-button-prev'
+      }
+    })
+
   }
 
 
