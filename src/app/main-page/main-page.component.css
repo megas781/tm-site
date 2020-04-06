@@ -68,6 +68,7 @@
 
 .activities-swiper {
   width: 100%;
+  /*overflow: visible !important;*/
 }
 .activity-slide {
   height: 240px;
@@ -76,6 +77,7 @@
 .activity-image {
   max-width: 100%;
   max-height: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 
 @media all and (max-width: 768px) {
@@ -212,6 +214,7 @@
   margin: 0 auto;
   /*min-height: 320px;*/
   max-height: 64vh;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 .our-plays__pagination {
   bottom: -40px;
@@ -297,6 +300,7 @@
   height: 0;
   width: 6px;
   background-color: var(--blue);
+  border-radius: 6px;
 
   transition: 0.3s ease-out;
 
@@ -313,7 +317,7 @@
   transform-origin: center center;
 }
 .years__year:hover::after {
-  height: 20px;
+  height: 24px;
 }
 
 .years__year-blue-selection {
@@ -325,4 +329,24 @@
   border-radius: 8px;
   bottom: 0;
   display: block;
+}
+
+/* children plays slider */
+.children-plays-section {
+
+}
+.children-plays__swiper {
+  width: 100%;
+}
+.children-plays__slide {
+  width: 300px;
+}
+.children-plays__image {
+  height: 240px;
+  width: 320px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background: radial-gradient(circle at 100px 0, lightgray, gray);
 }

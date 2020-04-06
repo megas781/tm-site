@@ -20,6 +20,7 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
     var swiper = new Swiper('.activities-swiper', {
+      grabCursor: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -35,6 +36,7 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
 
     var youCanSwiper = new Swiper('.split-view__image-side > .swiper-container', {
+      grabCursor: true,
       autoplay: {
         delay: 4000
       },
@@ -43,6 +45,7 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
 
     var ourPlaysSwiper = new Swiper( '.our-plays__swiper', {
+      grabCursor: true,
       breakpoints: {
         0: {
           slidesPerView: 2
@@ -51,8 +54,12 @@ export class MainPageComponent implements OnInit, AfterViewInit {
           slidesPerView: 3
         }
       },
+      autoplay: {
+        delay: 8000
+      },
       pagination: {
-        el: '.swiper-pagination'
+        el: '.swiper-pagination',
+        clickable: true
       },
       spaceBetween: 32,
       centeredSlides: true,
@@ -60,8 +67,27 @@ export class MainPageComponent implements OnInit, AfterViewInit {
         nextEl: '.our-plays__swiper .swiper-button-next',
         prevEl: '.our-plays__swiper .swiper-button-prev'
       }
-    })
+    });
 
+    // var childrenPlaysSwiper = new Swiper('.children-plays__swiper', {
+    //   centeredSlides: true,
+    // })
+    var childrenPlaySwiper = new Swiper('.children-plays__swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      // coverflowEffect: {
+      //   rotate: 50,
+      //   stretch: 0,
+      //   depth: 100,
+      //   modifier: 1,
+      //   slideShadows : true,
+      // },
+      pagination: {
+        el: '.children-plays__swiper .swiper-pagination',
+      },
+    });
   }
 
 
