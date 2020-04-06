@@ -2,7 +2,6 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {TweenLite, TimelineMax, TweenMax, TimelineLite} from 'gsap';
 import Swiper from 'swiper';
 
-
 // import * as ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
 // import 'script-loader!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 // import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
