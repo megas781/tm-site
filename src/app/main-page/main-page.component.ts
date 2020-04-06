@@ -69,9 +69,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
       }
     });
 
-    // var childrenPlaysSwiper = new Swiper('.children-plays__swiper', {
-    //   centeredSlides: true,
-    // })
     var childrenPlaySwiper = new Swiper('.children-plays__swiper', {
       effect: 'coverflow',
       grabCursor: true,
