@@ -337,13 +337,13 @@
 }
 .children-plays__swiper {
   width: 100%;
+  padding: 16px 0 32px;
 }
 .children-plays__slide {
-  width: 300px;
+  max-width: 480px;
 }
 .children-plays__image {
-  height: 240px;
-  width: 320px;
+
 }
 .box {
   height: 100px;
