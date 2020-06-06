@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import Swiper from 'swiper';
+import {ScrollMagic} from 'scrollmagiclib';
 
 @Component({
   selector: 'app-our-plays-section',
@@ -7,6 +8,8 @@ import Swiper from 'swiper';
   styleUrls: ['./our-plays-section.component.css']
 })
 export class OurPlaysSectionComponent implements OnInit {
+
+  @Input() scrollCtrl: ScrollMagic;
 
   constructor() { }
 
