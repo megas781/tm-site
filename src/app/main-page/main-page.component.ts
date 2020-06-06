@@ -2,10 +2,10 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {TweenLite, TimelineMax, TweenMax, TimelineLite} from 'gsap';
 import Swiper from 'swiper';
 
-
-// import * as ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
-// import 'script-loader!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+import { ScrollMagic, Scene } from 'scrollmagiclib';
+//  import * as ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
+//  import 'script-loader!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+//  import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 @Component({
   selector: 'app-main-page',
@@ -13,6 +13,8 @@ import Swiper from 'swiper';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit, AfterViewInit {
+ // ScrollmagicController: ScrollMagic;
+  //scrollmagicController: any;
 
   constructor() {
   }
@@ -87,18 +89,33 @@ export class MainPageComponent implements OnInit, AfterViewInit {
     });
   }
 
-
-  // ctrl = new ScrollMagic.Controller();
+  scrollmagic: ScrollMagic = null; //controller
+  //ctrl = new ScrollMagic.Controller();
 
   ngAfterViewInit(): void {
     //анимации
-    // new ScrollMagic.Scene({
-    //   triggerElement: '.slogan-part__body',
-    //   triggerHook: 0
-    // })
-    //   .setTween(TweenLite.from(document.querySelector('.slogan-part__body'), 1, {y: 50, opacity: 0}))
-    //   .addTo(this.ctrl);
+    this.ScrollmagicController = new ScrollMagic(window, true);
+    var scene1 = new Scene(300, 0, ".activities__list > *:nth-child(3)", 0.8, true);
+    scene1.AddIndicators('Indicator');
+    scene1.setTween(new TweenLite('.activities__list > *:nth-child(3)', 1, {opacity: 0.5, x: 200}))
+    this.scrollmagicController.AddScenes([scene1]);
+    // var scene1 = new ScrollMagic.Scene({
+    //    triggerElement: ".top-left",
+    //    duration: 400,
+    //    offset: 0
+    //  })
+    //    .setTween(TweenLite.from(document.querySelector('.top-left'), 1, {left: 100, opacity: 0}))
+    //    .addIndicators({name: "3 (duration: 379)"})
+    //    //.addTo(this.ctrl);
+    //    this.scrollmagicController.AddScenes([scene1]);
 
+    // var scene2 = new ScrollMagic.Scene({
+    //     triggerElement: '.awards__list',
+    //     triggerHook: 0
+    // })
+    //     .setTween(TweenLite.from(document.querySelector('.awards__list'), 1, {y: 50, opacity: 0}))
+    //     //.addTo(this.ctrl);
+    //     this.scrollmagicController.AddScenes([scene2]);
 
     TweenLite.from(document.querySelector('.intro__image'), 3, {opacity: 0, scale: 0.9, delay: 1.0});
     console.log('scrollmagic');
@@ -106,4 +123,5 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   }
 
 }
+
 
