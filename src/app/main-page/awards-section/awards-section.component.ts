@@ -36,16 +36,16 @@ export class AwardsSectionComponent implements OnInit, AfterViewInit {
     }, {x: -silhouetteMoveLength, y: silhouetteMoveLength, ease: 'linear'});
     const tweenBottomLeft = TweenLite.fromTo('.decoration-silhouette.bottom-left', 1, {
       x: -silhouetteMoveLength,
-      y: -silhouetteMoveLength
-    }, {x: silhouetteMoveLength, y: silhouetteMoveLength, ease: 'linear'});
+      // y: -silhouetteMoveLength
+    }, {x: silhouetteMoveLength, /*y: silhouetteMoveLength,*/ });
     const tweenBottomRight = TweenLite.fromTo('.decoration-silhouette.bottom-right', 1, {
       x: -silhouetteMoveLength,
-      y: silhouetteMoveLength
-    }, {x: silhouetteMoveLength, y: -silhouetteMoveLength, ease: 'linear'});
+      // y: silhouetteMoveLength
+    }, {x: silhouetteMoveLength, /*y: -silhouetteMoveLength,*/ });
     const tweenTopRight = TweenLite.fromTo('.decoration-silhouette.top-right', 1, {
-      x: silhouetteMoveLength,
-      y: silhouetteMoveLength
-    }, {x: -silhouetteMoveLength, y: -silhouetteMoveLength, ease: 'linear'});
+      x: -silhouetteMoveLength,
+      y: -silhouetteMoveLength
+    }, {x: 0, y: silhouetteMoveLength, ease: 'linear'});
 
     //Теперь все tween'ы нужно запихнуть в один компот под названием Timeline.
     //Если не изучала, что это такое, то в кратце, это последовательность tween'ов.
