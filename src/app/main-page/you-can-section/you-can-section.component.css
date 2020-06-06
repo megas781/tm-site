@@ -45,14 +45,6 @@
 
 }
 
-.decoration-silhouette {
-  position: absolute;
-  /*max-width: 120px;*/
-  /*max-height: 120px;*/
-  user-select: none;
-  pointer-events: none;
-  display: block;
-}
 .mask-1 {
   left: -160px;
   top: -20px;

@@ -1,6 +1,6 @@
 /* FINAL SLOGAN SECTION */
 .final-slogan-section {
-  padding: 180px 0;
+  padding: 140px 0 40px;
   color: var(--red);
 }
 .final-slogan-section .container {
@@ -10,28 +10,32 @@
 }
 .final-slogan__text-red-logo {
   width: 200px;
+  margin-bottom: 16px;
 }
 .sl__part {
   text-align: center;
 }
-.sl-1 {
+/*.sl-1 {*/
 
-}
+/*}*/
 .sl-2 {
   font-style: italic;
   font-size: 52px;
+  margin-bottom: 8px;
 }
 .sl-3 {
   font-weight: 400;
   font-size: 54px;
+  margin-bottom: 16px;
 }
 .sl-4 {
   font-weight: 200;
   /*font-style: italic;*/
   font-size: 30px;
   position: relative;
-  margin-bottom: 16px;
   white-space: nowrap;
+
+  margin-bottom: 30px;
 }
 .sl-4:before {
   content: '';
