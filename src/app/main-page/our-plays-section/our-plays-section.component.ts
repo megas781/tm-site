@@ -17,6 +17,7 @@ export class OurPlaysSectionComponent implements OnInit {
 
     var ourPlaysSwiper = new Swiper( '.our-plays__swiper', {
       grabCursor: true,
+      initialSlide: 1,
       breakpoints: {
         0: {
           slidesPerView: 2

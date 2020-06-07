@@ -25,11 +25,14 @@
 .split-view__text-side {
   list-style-type: '— ';
   font-size: 18px;
+  position: relative;
+  z-index: 2;
 }
 .split-view__parah {
   margin-bottom: 18px;
   color: #454545;
   transition: 0.2s;
+  cursor: pointer;
   /*transition-property: ;*/
 }
 .split-view__parah:hover {
@@ -40,10 +43,48 @@
   max-width: 40%;
   padding: 32px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 .split-view__image {
 
 }
+
+/* Дизайним слайдер */
+.custom-slider {
+  position: relative;
+  overflow: visible;
+  height: 200px;
+  width: 200px;
+}
+.custom-slider__slide {
+  position: absolute;
+  pointer-events: none;
+  transition-property: opacity, left;
+}
+.custom-slider__slide.prev {
+  left: -100px;
+  opacity: 0;
+}
+.custom-slider__slide.active {
+  left: 0;
+  opacity: 1;
+}
+.custom-slider__slide.next {
+  left: 100px;
+  opacity: 0;
+}
+/*.swiper-container {*/
+/*  overflow: visible;*/
+/*}*/
+/*.swiper-slide {*/
+/*  opacity: 0;*/
+/*  transition: opacity 0.2s;*/
+/*}*/
+/*.swiper-slide-active {*/
+/*  opacity: 1;*/
+/*  transition: opacity 0.2s;*/
+/*}*/
 
 .mask-1 {
   left: -160px;

@@ -1,6 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {ScrollMagic} from 'scrollmagiclib'; //ремарка: принимаем тот факт, что ScrollMagic – это и есть класс контроллера.
-import {Scene} from 'scrollmagiclib';
 import {TimelineLite, TweenLite} from 'gsap';
 
 @Component({
@@ -9,8 +8,6 @@ import {TimelineLite, TweenLite} from 'gsap';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit, AfterViewInit {
-  // ScrollmagicController: ScrollMagic;
-  //scrollmagicController: any;
 
   scrollCtrl: ScrollMagic;
 
