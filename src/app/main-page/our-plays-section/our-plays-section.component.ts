@@ -26,9 +26,9 @@ export class OurPlaysSectionComponent implements OnInit {
           slidesPerView: 3
         }
       },
-      autoplay: {
-        delay: 8000
-      },
+      // autoplay: {
+      //   delay: 8000
+      // },
       pagination: {
         el: '.swiper-pagination',
         clickable: true
