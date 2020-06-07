@@ -1,6 +1,6 @@
 footer {
-  background: #A14DB6;
-  color: white;
+  background: var(--purple);
+  color: var(--light-blue);
   padding: 20px 0;
 }
 footer .container {

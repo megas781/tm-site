@@ -1,0 +1,58 @@
+/* FINAL SLOGAN SECTION */
+.final-slogan-section {
+  padding: 140px 0 40px;
+  color: var(--red);
+}
+.final-slogan-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.final-slogan__text-red-logo {
+  width: 200px;
+  margin-bottom: 16px;
+}
+.sl__part {
+  text-align: center;
+}
+/*.sl-1 {*/
+
+/*}*/
+.sl-2 {
+  font-style: italic;
+  font-size: 52px;
+  margin-bottom: 8px;
+}
+.sl-3 {
+  font-weight: 400;
+  font-size: 54px;
+  margin-bottom: 16px;
+}
+.sl-4 {
+  font-weight: 200;
+  /*font-style: italic;*/
+  font-size: 30px;
+  position: relative;
+  white-space: nowrap;
+
+  margin-bottom: 30px;
+}
+.sl-4:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--red);
+  position: absolute;
+}
+.sl-5 {
+  padding: 8px 16px;
+  background-color: var(--red);
+  color: white;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 30px;
+  white-space: nowrap;
+}

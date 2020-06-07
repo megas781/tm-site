@@ -1,0 +1,114 @@
+
+.children-plays-section {
+  padding: 80px 0;
+}
+.children-plays-section > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.children-plays__title {
+  background-color: var(--red);
+  color: var(--light-blue);
+  padding: 10px 20px;
+}
+
+.children-plays__years {
+}
+
+.years__top-line {
+  background-color: var(--blue);
+  height: 6px;
+  margin: 0 44px;
+}
+.years__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.years__year {
+  font-size: 20px;
+  width: 40px;
+  height: 23px;
+  position: relative;
+
+  margin-top: 20px;
+  padding: 8px 24px;
+
+  /*transition: 0.3s linear;*/
+
+  user-select: none;
+  cursor: pointer;
+
+  border-radius: 8px;
+  background-color: white;
+
+}
+
+.years__year::before {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 8px;
+  border-radius: 8px;
+  background-color: var(--blue);
+
+  transition: 0.3s ease-out;
+
+  position: absolute;
+  left: calc(44px - 4px); /* середина текстового дива */
+  top: calc(-7px - 20px); /* чтоб ровно по центру полосы. Полоса - 6px, шар – 8px -> среднее 7. а еще margin-top у года 20px */
+}
+.years__year::after {
+  content: '';
+  display: block;
+  height: 0;
+  width: 6px;
+  background-color: var(--blue);
+  border-radius: 6px;
+
+  transition: 0.3s ease-out;
+
+  position: absolute;
+  left: calc(44px - 3px); /* середина года */
+  top: calc(-20px); /* чтоб ровно по центру полосы. Полоса - 6px, шар – 8px -> среднее 7. а еще margin-top у года 20px */
+}
+.years__year:hover {
+  background-color: var(--blue);
+  color: var(--light-blue);
+}
+.years__year:hover::before {
+  transform: scale(1.6);
+  transform-origin: center center;
+}
+.years__year:hover::after {
+  height: 24px;
+}
+
+.years__year-blue-selection {
+  background-color: var(--blue);
+  position: absolute;
+
+  height: calc(23px + 8px + 8px);
+  width: 88px;
+  border-radius: 8px;
+  bottom: 0;
+  display: block;
+}
+
+/* children plays slider */
+.children-plays-section {
+
+}
+.children-plays__swiper {
+  width: 100%;
+  padding: 16px 0 32px;
+}
+.children-plays__slide {
+  max-width: 480px;
+}
+.children-plays__image {
+
+}

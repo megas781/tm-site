@@ -12,6 +12,12 @@ import { PortfolioPageComponent } from './portfolio-page/portfolio-page.componen
 import { MembersPageComponent } from './members-page/members-page.component';
 import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 import { FooterComponent } from './master/footer/footer.component';
+import { ActivitiesSectionComponent } from './main-page/activities-section/activities-section.component';
+import { YouCanSectionComponent } from './main-page/you-can-section/you-can-section.component';
+import { OurPlaysSectionComponent } from './main-page/our-plays-section/our-plays-section.component';
+import { ChildrenPlaysSectionComponent } from './main-page/children-plays-section/children-plays-section.component';
+import { AwardsSectionComponent } from './main-page/awards-section/awards-section.component';
+import { FinalSloganSectionComponent } from './main-page/final-slogan-section/final-slogan-section.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { FooterComponent } from './master/footer/footer.component';
     PortfolioPageComponent,
     MembersPageComponent,
     ContactsPageComponent,
-    FooterComponent
+    FooterComponent,
+    ActivitiesSectionComponent,
+    YouCanSectionComponent,
+    OurPlaysSectionComponent,
+    ChildrenPlaysSectionComponent,
+    AwardsSectionComponent,
+    FinalSloganSectionComponent
   ],
   imports: [
     BrowserModule,

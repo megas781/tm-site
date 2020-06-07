@@ -1,0 +1,67 @@
+
+/* OUR PLAYS SECTION */
+
+.our-plays-section {
+
+  background-color: var(--purple);
+  color: var(--light-blue);
+  /*height: 100vh;*/
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px;
+  position: relative;
+}
+.our-plays__container {
+
+  max-width: 100%;
+}
+
+.our-plays__title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+.swiper-container.our-plays__swiper {
+  overflow: visible !important;
+  padding: 32px 0;
+}
+.our-plays__swiper .swiper-wrapper {
+  overflow: visible !important;
+  /*overflow-x: hidden !important;*/
+}
+.our-plays__slide {
+  transition: 0.3s ease-out;
+}
+.our-plays__slide.swiper-slide-active {
+  transform: scale(1.2);
+  position: relative;
+  z-index: 228;
+  /*margin: 0 32px;*/
+}
+.our-plays__slide-image {
+  display: block;
+  margin: 0 auto;
+  /*min-height: 320px;*/
+  max-height: 64vh;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.our-plays__pagination {
+  bottom: -40px;
+}
+
+@media screen and (max-width: 768px) {
+  .our-plays__swiper {
+    padding: 64px 0;
+  }
+  .our-plays__slide.swiper-slide-active {
+    transform: scale(1.3);
+  }
+  .our-plays__title {
+
+  }
+}

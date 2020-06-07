@@ -1,11 +1,7 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {TweenLite, TimelineMax, TweenMax, TimelineLite} from 'gsap';
-import Swiper from 'swiper';
-
-import { ScrollMagic, Scene } from 'scrollmagiclib';
-//  import * as ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
-//  import 'script-loader!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-//  import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ScrollMagic } from 'scrollmagiclib'; //ремарка: принимаем тот факт, что ScrollMagic – это и есть класс контроллера.
+import { Scene } from 'scrollmagiclib';
+import { TimelineLite, TweenLite } from 'gsap';
 
 @Component({
   selector: 'app-main-page',
@@ -13,113 +9,41 @@ import { ScrollMagic, Scene } from 'scrollmagiclib';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit, AfterViewInit {
- // ScrollmagicController: ScrollMagic;
+  // ScrollmagicController: ScrollMagic;
   //scrollmagicController: any;
+
+  scrollCtrl: ScrollMagic;
 
   constructor() {
   }
 
   ngOnInit() {
-
-    var swiper = new Swiper('.activities-swiper', {
-      grabCursor: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      slidesPerView: 'auto',
-      spaceBetween: 32,
-      freeMode: true,
-      autoplay: {
-        delay: 3000,
-      },
-      // loop: true
-    });
-
-
-    var youCanSwiper = new Swiper('.split-view__image-side > .swiper-container', {
-      grabCursor: true,
-      autoplay: {
-        delay: 4000
-      },
-      // effect: 'fade',
-    })
-
-
-    var ourPlaysSwiper = new Swiper( '.our-plays__swiper', {
-      grabCursor: true,
-      breakpoints: {
-        0: {
-          slidesPerView: 2
-        },
-        769: {
-          slidesPerView: 3
-        }
-      },
-      autoplay: {
-        delay: 8000
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      spaceBetween: 32,
-      centeredSlides: true,
-      navigation: {
-        nextEl: '.our-plays__swiper .swiper-button-next',
-        prevEl: '.our-plays__swiper .swiper-button-prev'
-      }
-    });
-
-    var childrenPlaySwiper = new Swiper('.children-plays__swiper', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      // coverflowEffect: {
-      //   rotate: 50,
-      //   stretch: 0,
-      //   depth: 100,
-      //   modifier: 1,
-      //   slideShadows : true,
-      // },
-      pagination: {
-        el: '.children-plays__swiper .swiper-pagination',
-      },
-    });
+    /* Контроллер инициализируется в ngOnInit, чтобы при инициализации представления, когда мы его будем
+    передавать в awards-section (см. main-page.component.html), это свойство уже существовало */
+    this.scrollCtrl = new ScrollMagic('body');
   }
 
-  scrollmagic: ScrollMagic = null; //controller
-  //ctrl = new ScrollMagic.Controller();
-
   ngAfterViewInit(): void {
-    //анимации
-    this.ScrollmagicController = new ScrollMagic(window, true);
-    var scene1 = new Scene(300, 0, ".activities__list > *:nth-child(3)", 0.8, true);
-    scene1.AddIndicators('Indicator');
-    scene1.setTween(new TweenLite('.activities__list > *:nth-child(3)', 1, {opacity: 0.5, x: 200}))
-    this.scrollmagicController.AddScenes([scene1]);
-    // var scene1 = new ScrollMagic.Scene({
-    //    triggerElement: ".top-left",
-    //    duration: 400,
-    //    offset: 0
-    //  })
-    //    .setTween(TweenLite.from(document.querySelector('.top-left'), 1, {left: 100, opacity: 0}))
-    //    .addIndicators({name: "3 (duration: 379)"})
-    //    //.addTo(this.ctrl);
-    //    this.scrollmagicController.AddScenes([scene1]);
+    // анимация первого блока с лого и Добро пожаловать 
+    const scenePreview = new Scene(0,
+      -56,
+      '.intro-section',
+      '0',
+      false);
 
-    // var scene2 = new ScrollMagic.Scene({
-    //     triggerElement: '.awards__list',
-    //     triggerHook: 0
-    // })
-    //     .setTween(TweenLite.from(document.querySelector('.awards__list'), 1, {y: 50, opacity: 0}))
-    //     //.addTo(this.ctrl);
-    //     this.scrollmagicController.AddScenes([scene2]);
+    const tweenLogo = TweenLite.fromTo('.intro__image', 4, { opacity: 0, scale: 0.9, delay: 0.1 }, { opacity: 1, scale: 1, delay: 0.1 });
 
-    TweenLite.from(document.querySelector('.intro__image'), 3, {opacity: 0, scale: 0.9, delay: 1.0});
-    console.log('scrollmagic');
+    const tweenWelcome = TweenLite.fromTo('.intro__greeting', 2, { opacity: 0, delay: 3 }, { opacity: 1, delay: 3 });
 
+    //Если не изучала... Изучала)
+    const previewAnimation = new TimelineLite()
+      .add(tweenLogo, 0)
+      .add(tweenWelcome, 1);
+
+    scenePreview
+      .setTween(previewAnimation);
+    //Теперь (внимание!) обращаемся не к scene.AddToController(), а именно к контроллеру
+    this.scrollCtrl.AddScenes([scenePreview]);
   }
 
 }
