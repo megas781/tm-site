@@ -14,8 +14,8 @@
     "moduleResolution": "node",
     "importHelpers": false,
     "target": "es2015",
-    "allowJs": true,// моих рук дело
-        "typeRoots": [
+    "allowJs": true, // моих рук дело
+    "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
@@ -26,6 +26,9 @@
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "paths": {
+    "velocity": ["node_modules/velocity-animate/velocity.min.js"]
+  }
   }
 }
