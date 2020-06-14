@@ -39,20 +39,21 @@ export class YouCanSectionComponent implements OnInit, AfterViewInit {
     //Содаем TweenLite для каждого силуэта. параметр ease: "linear", чтобы анимация не замедлялась в конце
     const tweenMask1 = TweenLite.fromTo('.decoration-silhouette.mask-1', 1, {
       y: 0
-    }, {y: -silhouetteMoveLength, ease: 'linear', rotation: "+=25"});
+    }, {y: -silhouetteMoveLength, ease: 'linear', rotation: "+=45"});
     const tweenMask2 = TweenLite.fromTo('.decoration-silhouette.mask-2', 1, {
       y: 0
-    }, {y: -silhouetteMoveLength, ease: 'linear', rotation: "-=25"});
+    }, {y: -silhouetteMoveLength, ease: 'linear', rotation: "-=35"});
     const tweenLamp = TweenLite.fromTo('.decoration-silhouette.lamp', 1, {
       y: 0,
-      rotation: "-20"
-    }, {y: -silhouetteMoveLength, ease: 'linear', rotation: "-10"});
+      rotation: "-20", 
+      scale:0.7
+    }, {y: -silhouetteMoveLength, ease: 'linear', rotation: "-10", scale:1.4});
     const tweenPen = TweenLite.fromTo('.decoration-silhouette.pen', 1, {
       y: 0
     }, {y: silhouetteMoveLength, ease: 'linear'});
     const tweenBook = TweenLite.fromTo('.decoration-silhouette.book', 1, {
       y: 0
-    }, {y: -silhouetteMoveLength * 0.8, ease: 'linear', rotation: "-=5"});
+    }, {y: -silhouetteMoveLength * 0.8, ease: 'linear', rotation: "-=15"});
 
     //Теперь все tween'ы нужно запихнуть в один компот под названием Timeline.
     //Если не изучала, что это такое, то в кратце, это последовательность tween'ов.
