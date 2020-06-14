@@ -1,1 +1,12 @@
-<p>members-page works!</p>
+<h1 class="page-header">Участники Творческой Мастерской</h1>
+
+<section class="members-container">
+  <div class="" *ngIf="memberService.getMembers().length < 2; then loading; else content"></div>
+  <ng-template #loading>
+    <div class="loading-view">Грузим...</div>
+  </ng-template>
+  <ng-template #content>
+    <app-member-view *ngFor="let member of memberService.getMembers()"
+                     [member]="member"></app-member-view>
+  </ng-template>
+</section>
