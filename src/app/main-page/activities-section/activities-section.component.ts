@@ -24,7 +24,7 @@ export class ActivitiesSectionComponent implements OnInit {
       spaceBetween: 32,
       freeMode: true,
       autoplay: {
-        delay: 3000,
+        delay: 8000
       },
     });
   }

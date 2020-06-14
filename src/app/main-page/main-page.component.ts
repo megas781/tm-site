@@ -14,18 +14,13 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
   scrollCtrl: ScrollMagic;
 
-  constructor(public memberService: MemberService) {
+  constructor() {
   }
 
   ngOnInit() {
     /* Контроллер инициализируется в ngOnInit, чтобы при инициализации представления, когда мы его будем
     передавать в awards-section (см. main-page.component.html), это свойство уже существовало */
     this.scrollCtrl = new ScrollMagic('body');
-
-    let self = this;
-    this.memberService.fetchMembers(function() {
-      // console.log(self.memberService.getMembers());
-    });
   }
 
   ngAfterViewInit(): void {

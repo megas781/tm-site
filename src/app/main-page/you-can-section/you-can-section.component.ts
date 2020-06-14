@@ -54,8 +54,8 @@ export class YouCanSectionComponent implements OnInit, AfterViewInit {
       rotation: '0'
     }, {y: -silhouetteMoveLength, ease: 'linear', rotation: '-25'});
     const tweenPen = TweenLite.fromTo('.decoration-silhouette.pen', 1, {
-      y: 0
-    }, {y: silhouetteMoveLength * 0.5, ease: 'linear'});
+      y: 0, rotation: -20
+    }, {y: silhouetteMoveLength * 0.5, rotation: 20, ease: 'linear'});
     const tweenBook = TweenLite.fromTo('.decoration-silhouette.book', 1, {
       y: 0
     }, {y: -silhouetteMoveLength * 0.8, ease: 'linear', rotation: '-=10'});
