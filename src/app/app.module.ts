@@ -22,6 +22,7 @@ import { MemberViewComponent } from './members-page/member-view/member-view.comp
 import { EventViewComponent } from './events-page/event-view/event-view.component';
 import { JoinUsComponent } from './reusable-modules/join-us/join-us.component';
 import { LoadingComponent } from './reusable-modules/loading/loading.component';
+import { EventListComponent } from './events-page/event-list/event-list.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { LoadingComponent } from './reusable-modules/loading/loading.component';
     MemberViewComponent,
     EventViewComponent,
     JoinUsComponent,
-    LoadingComponent
+    LoadingComponent,
+    EventListComponent
   ],
   imports: [
     BrowserModule,

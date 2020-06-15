@@ -4,12 +4,33 @@
 
 <section class="events-container container">
 
-  <div class="" *ngIf="eventService.getEvents().length < 2; then loading; else content"></div>
+  <!--  If: подгрузка или контент-->
+  <div *ngIf="eventService.getEvents() == null; then loading; else content"></div>
+
   <ng-template #loading>
     <app-loading></app-loading>
   </ng-template>
+
   <ng-template #content>
-    <app-event-view *ngFor="let event of eventService.getEvents()" [event]="event"></app-event-view>
+
+    <div class="flex-container" style="margin-bottom: 60px;">
+      <!--    If: пусто или есть предстоящие мероприятия-->
+      <div *ngIf="eventService.upcomingEvents == null; then noEvents; else eventsView"></div>
+      <ng-template #noEvents>
+        <div class="no-upcoming-events">
+          <h2>Упс!</h2>
+          <p>В ближайшее время не ожидается мероприятий.<br>Но мы репетируем и скоро их анонсируем! :)</p>
+        </div>
+      </ng-template>
+      <ng-template #eventsView>
+        <h2 class="page-subheader red-title">Предстоящие мероприятия</h2>
+        <app-event-view *ngFor="let event of eventService.upcomingEvents" [event]="event"></app-event-view>
+      </ng-template>
+    </div>
+
+    <app-event-list listTitle="Прошедшие мероприятия" [events]="eventService.pastEvents" [useFadeAppear]="true" [scrollCtrl]="scrollCtrl"></app-event-list>
+
+
     <app-join-us [displayHint]="true"></app-join-us>
   </ng-template>
 </section>

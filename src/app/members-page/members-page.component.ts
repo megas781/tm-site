@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterContentChecked, AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
 import {MemberService} from "../member.service";
 import {Member} from '../data-model/Member';
 @Component({

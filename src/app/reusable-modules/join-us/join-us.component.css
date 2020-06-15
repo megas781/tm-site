@@ -22,6 +22,7 @@
   color: white;
   text-decoration: none;
   font-size: 24px;
+  text-align: center;
 }
 .join-us__how-to-become-member-link:hover {
   background-color: #7d65b9;
@@ -29,6 +30,7 @@
 .join-us__to-events-link {
   color: var(--purple);
   font-size: 24px;
+  text-align: center;
 }
 .join-us__to-events-link:hover {
   text-decoration: none;

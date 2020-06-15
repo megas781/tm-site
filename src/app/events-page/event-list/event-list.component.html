@@ -1,0 +1,4 @@
+<div class="past-events-container flex-container">
+  <h2 class="page-subheader events-subheader gray-title">{{listTitle}}</h2>
+  <app-event-view *ngFor="let event of events" [event]="event"></app-event-view>
+</div>

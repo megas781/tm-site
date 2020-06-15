@@ -1,0 +1,11 @@
+.events-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-upcoming-events {
+  text-align: center;
+  margin: 80px 16px;
+}
+
+.past-events-container {}

@@ -10,9 +10,26 @@ export class EventService {
 
   events = new Map<string, Event>();
 
-  adIndex = 14;
+  upcomingEvents = new Array<Event>();
+  pastEvents = new Array<Event>();
 
   constructor() {
+
+    //Запрашиваем данные
+    let self = this;
+    this.fetchEvents(function() {
+      self.getEvents().forEach(function(value, index, array) {
+        if (value.getDate() > new Date()) {
+          self.upcomingEvents.push(value);
+        } else {
+          self.pastEvents.push(value);
+        }
+      });
+      //Если предстоящих мероприятий нет, то присваивем null, чтобы отобразилось сообщение об этом
+      if (self.upcomingEvents.length == 0) {
+        self.upcomingEvents = null;
+      }
+    });
   }
 
   fetchEvents(callback?: () => void) {
@@ -49,18 +66,19 @@ export class EventService {
   }
 
   getEvents(): Array<Event> {
-    let returnArray = new Array<Event>();
-    this.events.forEach(function(value, key, map) {
-      returnArray.push(value);
-    });
-    // let you = new Event('invite');
-    // you.vkUrl = 'https://vk.com/id0';
-    // you.photoUrl = 'https://avatars.mds.yandex.net/get-zen_doc/1209363/pub_5bac51271c5a9600aa6bc22c_5bac5171584c1f00aa3dd749/scale_1200';
-    // you.fio = 'А возможно, и ты!';
-    // you.position = 'Присоединяйся к нам!';
-    // // returnArray.splice(this.adIndex, 0, you);
-    // returnArray.push(you);
-    return returnArray;
+    //Если данные еще не получены, то не рыпаемся
+    if (this.events.size === 0) {
+      return  null;
+    } else {
+      let returnArray = new Array<Event>();
+      this.events.forEach(function(value, key, map) {
+        returnArray.push(value);
+      });
+      returnArray.sort(function(a, b) {
+        return a.getDate() > b.getDate() ? -1 : 1;
+      })
+      return returnArray;
+    }
   }
 
   getEventById(id: string): Event {

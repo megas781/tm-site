@@ -8,11 +8,11 @@
   align-items: center;
 }
 
-.children-plays__title {
-  background-color: var(--red);
-  color: var(--light-blue);
-  padding: 10px 20px;
-}
+/*.children-plays__title {*/
+/*  background-color: var(--red);*/
+/*  color: var(--light-blue);*/
+/*  padding: 10px 20px;*/
+/*}*/
 
 .children-plays__years {
 }
