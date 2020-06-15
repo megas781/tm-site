@@ -19,6 +19,9 @@ import { ChildrenPlaysSectionComponent } from './main-page/children-plays-sectio
 import { AwardsSectionComponent } from './main-page/awards-section/awards-section.component';
 import { FinalSloganSectionComponent } from './main-page/final-slogan-section/final-slogan-section.component';
 import { MemberViewComponent } from './members-page/member-view/member-view.component';
+import { EventViewComponent } from './events-page/event-view/event-view.component';
+import { JoinUsComponent } from './reusable-modules/join-us/join-us.component';
+import { LoadingComponent } from './reusable-modules/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { MemberViewComponent } from './members-page/member-view/member-view.comp
     ChildrenPlaysSectionComponent,
     AwardsSectionComponent,
     FinalSloganSectionComponent,
-    MemberViewComponent
+    MemberViewComponent,
+    EventViewComponent,
+    JoinUsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

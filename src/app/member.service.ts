@@ -14,7 +14,7 @@ export class MemberService {
 
   fetchMembers(callback?: () => void) {
     let self = this;
-    ajaxGet("https://spreadsheets.google.com/feeds/cells/1Bh-cfOrz5tfhlIE9UohaS0koI4TJZ5akNupkIPoDDCs/od6/public/values?alt=json").subscribe(function(ajax) {
+    ajaxGet("https://spreadsheets.google.com/feeds/cells/1Bh-cfOrz5tfhlIE9UohaS0koI4TJZ5akNupkIPoDDCs/1/public/values?alt=json").subscribe(function(ajax) {
 
       const mappings = {1: "fio", 2: "birthday", 3: "group", 4: "courseNumber", 5: "faculty", 6: "alive", 7: "photoUrl", 8:"vkUrl", 9: "position", 10: "comment"};
       let badIds = [];
@@ -45,7 +45,9 @@ export class MemberService {
         }
       }
       // console.log(this.people);
-      callback();
+      if (callback) {
+        callback();
+      }
     })
   }
 
@@ -59,7 +61,8 @@ export class MemberService {
     you.photoUrl = "https://avatars.mds.yandex.net/get-zen_doc/1209363/pub_5bac51271c5a9600aa6bc22c_5bac5171584c1f00aa3dd749/scale_1200";
     you.fio = "А возможно, и ты!";
     you.position = "Присоединяйся к нам!";
-    returnArray.splice(this.adIndex, 0, you);
+    // returnArray.splice(this.adIndex, 0, you);
+    returnArray.push(you);
     return returnArray;
   }
 

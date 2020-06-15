@@ -14,9 +14,7 @@ export class MembersPageComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     let self = this;
-    this.memberService.fetchMembers(function() {
-
-    });
+    this.memberService.fetchMembers();
   }
   ngAfterViewInit() {
 

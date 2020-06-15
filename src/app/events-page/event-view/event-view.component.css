@@ -1,0 +1,23 @@
+.event-view {
+  display: flex;
+  margin-bottom: 16px;
+}
+.event-view__image {
+  max-width: 240px;
+}
+
+.event-view__text-container {
+  padding: 16px;
+}
+
+.event-view__title {
+  font-weight: 400;
+  font-size: 22px;
+}
+.event-view__text {
+  font-size: 18px;
+}
+
+.event-view__meta-info {
+
+}

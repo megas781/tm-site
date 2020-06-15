@@ -1,9 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {ScrollMagic} from 'scrollmagiclib'; //ремарка: принимаем тот факт, что ScrollMagic – это и есть класс контроллера.
 import {TimelineLite, TweenLite} from 'gsap';
-import {ajaxGet} from 'rxjs/internal-compatibility';
-import {Member} from "../data-model/Member.js";
-import {MemberService} from '../member.service';
 
 @Component({
   selector: 'app-main-page',
@@ -21,6 +18,7 @@ export class MainPageComponent implements OnInit, AfterViewInit {
     /* Контроллер инициализируется в ngOnInit, чтобы при инициализации представления, когда мы его будем
     передавать в awards-section (см. main-page.component.html), это свойство уже существовало */
     this.scrollCtrl = new ScrollMagic('body');
+
   }
 
   ngAfterViewInit(): void {

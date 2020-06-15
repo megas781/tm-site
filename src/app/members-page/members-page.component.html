@@ -1,12 +1,18 @@
 <h1 class="page-header">Участники Творческой Мастерской</h1>
 
-<section class="members-container">
+
   <div class="" *ngIf="memberService.getMembers().length < 2; then loading; else content"></div>
+
   <ng-template #loading>
-    <div class="loading-view">Грузим...</div>
+    <app-loading></app-loading>
   </ng-template>
+
   <ng-template #content>
+    <section class="members-container">
     <app-member-view *ngFor="let member of memberService.getMembers()"
                      [member]="member"></app-member-view>
+    </section>
+    <app-join-us></app-join-us>
   </ng-template>
-</section>
+
+
