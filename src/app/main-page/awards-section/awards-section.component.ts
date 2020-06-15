@@ -65,11 +65,11 @@ export class AwardsSectionComponent implements OnInit, AfterViewInit {
       .setTween(awardsSilhouetteAnimation);
 
     //Анимация первого появления силуэтов
-    let scene2 = new Scene(0, 0, ".awards-section", 0.55, false);
-    scene2.setTween(TweenLite.from(".decoration-silhouette.top-left, .decoration-silhouette.top-right, .decoration-silhouette.bottom-right, .decoration-silhouette.bottom-left", 2.4, {opacity: 0}))
+    // let scene2 = new Scene(0, 0, ".awards-section", 0.55, false);
+    // scene2.setTween(TweenLite.from(".decoration-silhouette.top-left, .decoration-silhouette.top-right, .decoration-silhouette.bottom-right, .decoration-silhouette.bottom-left", 2.4, {opacity: 0}))
 
     //Теперь (внимание!) обращаемся не к scene.AddToController(), а именно к контроллеру
-    this.scrollCtrl.AddScenes([scene, scene2]);
+    this.scrollCtrl.AddScenes([scene]);
   }
 
 

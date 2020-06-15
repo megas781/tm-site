@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import {Member} from '../../data-model/Member';
 
 @Component({
@@ -6,7 +6,7 @@ import {Member} from '../../data-model/Member';
   templateUrl: './member-view.component.html',
   styleUrls: ['./member-view.component.css']
 })
-export class MemberViewComponent implements OnInit {
+export class MemberViewComponent implements OnInit, AfterViewInit {
 
   @Input() member: Member;
 
@@ -14,6 +14,8 @@ export class MemberViewComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+  ngAfterViewInit() {
   }
 
 }
