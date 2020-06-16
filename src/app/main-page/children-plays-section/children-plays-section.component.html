@@ -8,44 +8,22 @@
     <div class="children-plays__years years">
       <div class="years__top-line"></div>
       <div class="years__container">
-        <div class="years__year">2012</div>
-        <div class="years__year">2013</div>
-        <div class="years__year">2014</div>
-        <div class="years__year">2015</div>
-        <div class="years__year">2016</div>
-        <div class="years__year">2017</div>
-        <div class="years__year">2018</div>
-        <div class="years__year">2019</div>
+        <div class="years__year" *ngFor="let play of plays">{{play.year}}</div>
       </div>
     </div>
 
     <div class="swiper-container children-plays__swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide children-plays__slide"><img class="children-plays__image image"
-                                                             src="../../assets/images/images-by-nastya/sec-5-2014.jpg"
-                                                             alt=""></div>
-        <div class="swiper-slide children-plays__slide"><img class="children-plays__image image"
-                                                             src="../../assets/images/images-by-nastya/sec-5-2014.jpg"
-                                                             alt=""></div>
-        <div class="swiper-slide children-plays__slide"><img class="children-plays__image image"
-                                                             src="../../assets/images/images-by-nastya/sec-5-2014.jpg"
-                                                             alt=""></div>
-        <div class="swiper-slide children-plays__slide"><img class="children-plays__image image"
-                                                             src="../../assets/images/images-by-nastya/sec-5-2014.jpg"
-                                                             alt=""></div>
-        <div class="swiper-slide children-plays__slide"><img class="children-plays__image image"
-                                                             src="../../assets/images/images-by-nastya/sec-5-2014.jpg"
-                                                             alt=""></div>
-        <div class="swiper-slide children-plays__slide"><img class="children-plays__image image"
-                                                             src="../../assets/images/images-by-nastya/sec-5-2014.jpg"
-                                                             alt=""></div>
-        <div class="swiper-slide children-plays__slide"><img class="children-plays__image image"
-                                                             src="../../assets/images/images-by-nastya/sec-5-2014.jpg"
-                                                             alt=""></div>
-        <div class="swiper-slide children-plays__slide"><img class="children-plays__image image"
-                                                             src="../../assets/images/images-by-nastya/sec-5-2014.jpg"
-                                                             alt=""></div>
+        <div
+          *ngFor="let play of plays"
+          class="swiper-slide children-plays__slide">
+          <img class="children-plays__image"
+               src="{{play.localPath}}"
+               alt="{{play.title}}">
+        </div>
+
       </div>
+      <h3 class="children-play-name">{{plays[activeBulletIndex].title}}</h3>
     </div>
 
   </div>

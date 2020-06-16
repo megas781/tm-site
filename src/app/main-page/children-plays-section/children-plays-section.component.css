@@ -109,9 +109,21 @@
   width: 100%;
   padding: 16px 0 32px;
 }
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
 .children-plays__slide {
-  max-width: 480px;
+  height: 320px;
+  width: 480px;
 }
 .children-plays__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
+
+.children-play-name{
+  text-align: center;
 }
