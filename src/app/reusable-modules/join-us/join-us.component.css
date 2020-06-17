@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 0 200px;
+  padding: 0 0 140px;
 }
 .join-us__label {
   color: var(--purple);
@@ -34,4 +34,15 @@
 }
 .join-us__to-events-link:hover {
   text-decoration: none;
+}
+
+@media all and (max-width: 768px) {
+  .join-us__link-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .join-us__how-to-become-member-link {
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
 }

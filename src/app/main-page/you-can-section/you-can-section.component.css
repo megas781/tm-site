@@ -107,3 +107,10 @@
   right: -130px;
   max-width: 70px;
 }
+
+
+@media all and (max-width: 768px) {
+  .split-view__image-side {
+    display: none;
+  }
+}

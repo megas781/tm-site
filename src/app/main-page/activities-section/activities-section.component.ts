@@ -25,7 +25,8 @@ export class ActivitiesSectionComponent implements OnInit {
       spaceBetween: 32,
       freeMode: true,
       autoplay: {
-        delay: 8000
+        delay: 6000,
+        disableOnInteraction: false
       },
     });
   }
@@ -39,9 +40,9 @@ export class ActivitiesSectionComponent implements OnInit {
       '1',
       false);
     const activitiesAnimation = new TimelineLite();
-    for (var i = 1; i < 9; i++)
+    for (let i = 1; i < 9; i++)
     {
-      activitiesAnimation.add(TweenLite.from(".activity-"+i, 0.4, { opacity: 0, ease: 'linear'}), "-=0.25");
+      activitiesAnimation.add(TweenLite.from(".activity-"+i, 0.2, { opacity: 0, ease: 'linear'}), "-=0.15");
     };
 
     scene

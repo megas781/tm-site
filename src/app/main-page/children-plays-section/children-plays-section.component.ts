@@ -73,13 +73,18 @@ export class ChildrenPlaysSectionComponent implements OnInit, AfterViewInit {
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
-      pagination: {
-        el: '.years__container',
-        type: "custom",
-        bulletClass: "years__year",
-        bulletActiveClass: "active",
-        clickable: true
+      breakpoints: {
+        769: {
+          pagination: {
+            el: '.years__container',
+            type: "custom",
+            bulletClass: "years__year",
+            bulletActiveClass: "active",
+            clickable: true
+          },
+        }
       },
+
       autoplay: {
         delay: 3000
       }

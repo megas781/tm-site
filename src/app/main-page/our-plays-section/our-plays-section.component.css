@@ -23,7 +23,6 @@
 
 .our-plays__title {
   text-align: center;
-  font-size: 30px;
   margin-bottom: 60px;
 }
 .swiper-container.our-plays__swiper {
@@ -38,7 +37,7 @@
   transition: 0.3s ease-out;
 }
 .our-plays__slide.swiper-slide-active {
-  transform: scale(1.2);
+  transform: scale(1.1);
   position: relative;
   z-index: 228;
   /*margin: 0 32px;*/
@@ -54,14 +53,26 @@
   bottom: -40px;
 }
 
+@media all and (max-width: 480px) {
+  .our-plays__title {
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+
+  .our-plays-section {
+    padding: 16px;
+  }
+  .our-plays__title {
+    margin-top: 16px;
+  }
+
   .our-plays__swiper {
     padding: 64px 0;
   }
   .our-plays__slide.swiper-slide-active {
     transform: scale(1.3);
-  }
-  .our-plays__title {
-
   }
 }

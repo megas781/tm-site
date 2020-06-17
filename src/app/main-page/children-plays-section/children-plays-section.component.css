@@ -127,3 +127,9 @@
 .children-play-name{
   text-align: center;
 }
+
+@media all and (max-width: 768px) {
+  .years__container {
+    display: none;
+  }
+}
