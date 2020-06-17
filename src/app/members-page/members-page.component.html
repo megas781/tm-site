@@ -9,7 +9,7 @@
 
   <ng-template #content>
     <section class="members-container">
-    <app-member-view *ngFor="let member of memberService.getMembers()"
+    <app-member-view [scrollCtrl]="scrollCtrl" *ngFor="let member of memberService.getMembers()"
                      [member]="member"></app-member-view>
     </section>
     <app-join-us></app-join-us>

@@ -46,6 +46,9 @@
   background-color: white;
 
 }
+.swiper-pagination-custom {
+  bottom: 0 !important;
+}
 
 .years__year::before {
   content: '';
@@ -75,15 +78,15 @@
   left: calc(44px - 3px); /* середина года */
   top: calc(-20px); /* чтоб ровно по центру полосы. Полоса - 6px, шар – 8px -> среднее 7. а еще margin-top у года 20px */
 }
-.years__year:hover {
+.years__year.active {
   background-color: var(--blue);
   color: var(--light-blue);
 }
-.years__year:hover::before {
+.years__year.active::before {
   transform: scale(1.6);
   transform-origin: center center;
 }
-.years__year:hover::after {
+.years__year.active::after {
   height: 24px;
 }
 
@@ -106,9 +109,21 @@
   width: 100%;
   padding: 16px 0 32px;
 }
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
 .children-plays__slide {
-  max-width: 480px;
+  height: 320px;
+  width: 480px;
 }
 .children-plays__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
+
+.children-play-name{
+  text-align: center;
 }
