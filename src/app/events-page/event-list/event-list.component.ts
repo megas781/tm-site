@@ -20,7 +20,7 @@ export class EventListComponent implements OnInit, AfterViewInit {
 
   }
   ngAfterViewInit() {
-    let scene = new Scene(0,0, '.past-events-container',0.65, false);
+    let scene = new Scene(200,0, '.past-events-container',0.65, true);
     scene.setTween(TweenLite.from(".past-events-container", 0.45, {opacity: 0.33}));
     this.scrollCtrl.AddScenes(scene);
   }

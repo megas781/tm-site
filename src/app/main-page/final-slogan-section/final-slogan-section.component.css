@@ -56,3 +56,18 @@
   font-size: 30px;
   white-space: nowrap;
 }
+
+@media all and (max-width: 700px) {
+  .sl-2 {
+    font-size: 42px;
+  }
+  .sl-3 {
+    font-size: 46px;
+  }
+  .sl-4 {
+    font-size: 22px;
+  }
+  .sl-5 {
+    font-size: 18px;
+  }
+}

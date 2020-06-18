@@ -16,6 +16,9 @@
   margin: 0 auto;
   position: relative;
 
+  padding-right: 16px;
+  padding-bottom: 16px;
+
   display: flex;
   align-items: center;
   flex-direction: column;

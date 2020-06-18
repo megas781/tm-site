@@ -7,6 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsPageComponent implements OnInit {
 
+  contacts = [
+    // {
+    //   name: "Самвел Микиртычев",
+    //   position: "Руководитель коллектива",
+    //   links: [
+    //     {
+    //       pretitle: "ВК",
+    //       title: "vk.com/samvelmik",
+    //       link: "https://vk.com/samvelmik"
+    //     }
+    //   ]
+    // },
+    // {
+    //
+    // }
+  ]
+
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,7 @@
+@media all and (max-width: 480px){
+  .section-title {
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}

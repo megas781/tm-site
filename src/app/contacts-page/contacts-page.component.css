@@ -1,0 +1,53 @@
+.contacts-container {
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 30px;
+}
+.contacts-container > div {
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+}
+.contact__image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.contact__text-container {
+  padding: 8px 16px;
+}
+.contact__title {
+
+}
+.contact__subtitle {
+
+}
+.links {
+
+}
+.links__link {
+
+}
+
+.lenochka-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-box {
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media all and (max-width: 768px){
+  .contacts-container {
+    flex-direction: column;
+  }
+}

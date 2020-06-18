@@ -27,7 +27,23 @@ header .container {
 }
 
 .nav-item {
-  margin-left: 24px;
+  margin-right: 16px;
+  position: relative;
+  display: block;
+}
+.external {
+  margin-right: 26px;
+}
+.external::after {
+  content: '';
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  top: 0;
+  right: -12px;
+  background-image: url("../../../assets/images/external-link-icon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .nav-link {

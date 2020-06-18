@@ -31,7 +31,7 @@ export class MainPageComponent implements OnInit, AfterViewInit {
       {opacity: 1});
     new TimelineLite()
       .add(tweenLogo, 1.2)
-      .add(tweenWelcome, '-=0.3');
+      .add(tweenWelcome);
   }
 
 }
