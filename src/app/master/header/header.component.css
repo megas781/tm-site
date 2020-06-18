@@ -41,7 +41,7 @@ header .container {
   position: absolute;
   top: 0;
   right: -12px;
-  background-image: url("../../../assets/images/external-link-icon.png");
+  background: url("../../../assets/images/external-link-icon.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
