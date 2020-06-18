@@ -6,33 +6,24 @@
   margin-bottom: 60px;
   line-height: 30px;
 }
-.contacts-container > div {
+
+.contacts-container>div {
   width: 100%;
 }
 
 .contact {
   display: flex;
 }
+
 .contact__image {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 100%;
 }
+
 .contact__text-container {
   padding: 8px 16px;
-}
-.contact__title {
-
-}
-.contact__subtitle {
-
-}
-.links {
-
-}
-.links__link {
-
 }
 
 .lenochka-container {
@@ -46,8 +37,14 @@
   text-align: center;
 }
 
-@media all and (max-width: 768px){
+@media all and (max-width: 768px) {
   .contacts-container {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 405px) {
+  .contact {
     flex-direction: column;
   }
 }

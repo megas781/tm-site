@@ -42,7 +42,6 @@
     align-items: center;
   }
   .join-us__how-to-become-member-link {
-    margin-right: 0;
-    margin-bottom: 32px;
+    margin: 0 10px 32px
   }
 }

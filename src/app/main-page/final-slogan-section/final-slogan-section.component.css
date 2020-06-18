@@ -71,3 +71,19 @@
     font-size: 18px;
   }
 }
+
+@media all and (max-width: 425px) {
+  .sl-2 {
+    font-size: 40px;
+  }
+  .sl-3 {
+    font-size: 42px;
+  }
+  .sl-4 {
+    font-size: 19px;
+  }
+  .sl-5 {
+    font-size: 18px;
+    white-space: normal;
+  }
+}
