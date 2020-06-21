@@ -12,7 +12,6 @@ export class MemberViewComponent implements OnInit, AfterViewInit {
 
   @Input() scrollCtrl: ScrollMagic;
   @Input() member: Member;
-  
 
   constructor() { }
 
@@ -20,19 +19,7 @@ export class MemberViewComponent implements OnInit, AfterViewInit {
 
   }
   ngAfterViewInit() {
-    // const scene = new Scene(0,
-    //   0,
-    //   '.member-view',
-    //   '0.1',
-    //   false);
-
-    // const tween = TweenLite.from(".member-view", 0.2, {opacity: 0});
-    // scene
-    // //.AddIndicators('Member Scene')
-    // .setTween(tween);
-
-    // //Теперь (внимание!) обращаемся не к scene.AddToController(), а именно к контроллеру
-    // this.scrollCtrl.AddScenes(scene);
+    
   }
 
 }
