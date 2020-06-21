@@ -30,7 +30,7 @@ export class MembersPageComponent implements OnInit, AfterViewInit {
         '0.9',
         false)
       //.AddIndicators('Member Scene')
-        .setTween(TweenLite.from('.member-container__member:nth-child('+i+')', 0.4, {opacity: 0, y: -5}))
+        .setTween(TweenLite.from('.member-container__member:nth-child('+i+')', 0.5, {opacity: 0, y: -5}))
       );
       
     };
