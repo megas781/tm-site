@@ -9,14 +9,11 @@ header .container {
   position: relative;
 }
 
-.logo {
-
-}
 
 .logo__image {
   background-color: red;
   display: block;
-  max-height: 40px;
+  max-height: 50px;
   /*width: 140px;*/
 }
 
@@ -39,7 +36,7 @@ header .container {
   height: 8px;
   width: 8px;
   position: absolute;
-  top: 0;
+  top: 2px;
   right: -12px;
   background: url("../../../assets/images/external-link-icon.svg");
   background-size: cover;
@@ -69,14 +66,14 @@ header .container {
 
 .burger-button {
   display: none;
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   position: absolute;
   top: 4px;
   cursor: pointer;
   right: 8px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/280px-Hamburger_icon.svg.png");
-  background-size: contain;
+  background-image: url(../../../assets/images/burger.svg);
+  background-size: 35px;
   background-repeat: no-repeat;
 }
 @media (max-width: 768px) {
