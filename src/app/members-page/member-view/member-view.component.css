@@ -5,16 +5,15 @@
 }
 
 .member-view.invite .invite-image-container {
-  height: 240px;
-  width: 240px;
-  display: block;
-  overflow: visible;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  /*height: 240px;*/
+  /*width: 240px;*/
+  /*overflow: visible;*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*flex-direction: column;*/
 }
 .member-view.invite .invite-image {
-  max-height: 100%;
+  /*max-height: 100%;*/
 }
 
 .member-view__image {
@@ -33,4 +32,13 @@
 
 .member-view__subtitle {
   text-align: center;
+}
+@media all and (max-width:  768px) {
+  .member-view {
+    flex-direction: row;
+  }
+  .member-view__image {
+    height: 120px;
+    width: 120px;
+  }
 }

@@ -1,16 +1,18 @@
 <div class="member-view" [class.invite]="member.id == 'invite'">
-  <a href="{{member.vkUrl}}" target="_blank" style="display: block">
-    <div *ngIf="member.id != 'invite'; then memberCard; else invite"></div>
-    <ng-template #memberCard>
+  <a href="{{member.vkUrl}}" target="_blank" style="display: block; flex-shrink: 0">
+<!--    <div *ngIf="member.id != 'invite'; then memberCard; else invite"></div>-->
+<!--    <ng-template #memberCard>-->
       <img src="{{member.photoUrl}}" alt="" class="image member-view__image">
-    </ng-template>
-    <ng-template #invite>
-<!--      <div>изображение</div>-->
-            <div class="invite-image-container member-view__image">
-              <img class="invite-image" src="{{member.photoUrl}}" alt="">
-            </div>
-    </ng-template>
+<!--    </ng-template>-->
+<!--    <ng-template #invite>-->
+<!--&lt;!&ndash;      <div>изображение</div>&ndash;&gt;-->
+<!--            <div class="invite-image-container member-view__image">-->
+<!--              <img class="invite-image" src="{{member.photoUrl}}" alt="">-->
+<!--            </div>-->
+<!--    </ng-template>-->
   </a>
-  <div class="member-view__title">{{member.getName()}}</div>
-  <div class="member-view__subtitle">{{member.position}}</div>
+  <div style="flex-shrink: 1">
+    <div class="member-view__title">{{member.getName()}}</div>
+    <div class="member-view__subtitle">{{member.position}}</div>
+  </div>
 </div>
