@@ -44,4 +44,7 @@
   .join-us__how-to-become-member-link {
     margin: 0 10px 32px
   }
+  .join-us__label {
+    font-size: 40px;
+  }
 }

@@ -14,7 +14,7 @@
 
 .you-can__split-view {
   display: flex;
-  padding: 0 16px 16px 0;
+
   align-items: center;
 }
 .split-view__text-side {
@@ -22,6 +22,7 @@
   font-size: 18px;
   position: relative;
   z-index: 2;
+  padding-left: 20px;
 }
 .split-view__parah {
   margin-bottom: 18px;

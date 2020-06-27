@@ -17,10 +17,10 @@ export class OurPlaysSectionComponent implements OnInit {
 
     var ourPlaysSwiper = new Swiper( '.our-plays__swiper', {
       grabCursor: true,
-      initialSlide: 1,
+      // initialSlide: 1,
       breakpoints: {
         0: {
-          slidesPerView: 2
+          slidesPerView: 1
         },
         769: {
           slidesPerView: 3
@@ -34,7 +34,7 @@ export class OurPlaysSectionComponent implements OnInit {
         clickable: true
       },
       spaceBetween: 32,
-      centeredSlides: true,
+      // centeredSlides: true,
       navigation: {
         nextEl: '.our-plays__swiper .swiper-button-next',
         prevEl: '.our-plays__swiper .swiper-button-prev'
