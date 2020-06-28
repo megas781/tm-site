@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import Swiper from 'swiper';
 import {ScrollMagic} from 'scrollmagiclib';
 
@@ -7,7 +7,7 @@ import {ScrollMagic} from 'scrollmagiclib';
   templateUrl: './our-plays-section.component.html',
   styleUrls: ['./our-plays-section.component.css']
 })
-export class OurPlaysSectionComponent implements OnInit {
+export class OurPlaysSectionComponent implements OnInit, AfterViewInit {
 
   @Input() scrollCtrl: ScrollMagic;
 
@@ -15,6 +15,9 @@ export class OurPlaysSectionComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  ngAfterViewInit() {
     var ourPlaysSwiper = new Swiper( '.our-plays__swiper', {
       grabCursor: true,
       // initialSlide: 1,
@@ -40,7 +43,6 @@ export class OurPlaysSectionComponent implements OnInit {
         prevEl: '.our-plays__swiper .swiper-button-prev'
       }
     });
-
   }
 
 }

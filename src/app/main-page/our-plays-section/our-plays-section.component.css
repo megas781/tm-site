@@ -5,72 +5,75 @@
 
   background-color: var(--purple);
   color: var(--light-blue);
-  /*height: 100vh;*/
-  overflow: hidden;
+  /*overflow: hidden;*/
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
 
-  padding: 60px;
-  position: relative;
+  /*padding: 60px;*/
+  /*position: relative;*/
 }
-.our-plays__container {
+.our-plays__swiper {
 
-  max-width: 100%;
 }
 
 .our-plays__title {
-  text-align: center;
-  margin-bottom: 60px;
+  /*text-align: center;*/
+  /*margin-bottom: 60px;*/
 }
 .swiper-container.our-plays__swiper {
-  overflow: visible !important;
-  padding: 32px 0;
+  /*overflow: visible !important;*/
+  /*padding: 32px 0;*/
 }
 .our-plays__swiper .swiper-wrapper {
-  overflow: visible !important;
+  /*overflow: visible !important;*/
   /*overflow-x: hidden !important;*/
 }
 .our-plays__slide {
   /*transition: 0.3s ease-out;*/
+  height: 90vh;
 }
 .our-plays__slide.swiper-slide-active {
   /*transform: scale(1.1);*/
-  position: relative;
-  z-index: 228;
+  /*position: relative;*/
+  /*z-index: 228;*/
   /*margin: 0 32px;*/
 }
 .our-plays__slide-image {
-  display: block;
-  margin: 0 auto;
+  /*display: block;*/
+  /*margin: 0 auto;*/
   /*min-height: 320px;*/
-  max-height: 64vh;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  /*max-height: 64vh;*/
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /*object-position: center;*/
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 .our-plays__pagination {
-  bottom: -40px;
+  /*bottom: -40px;*/
 }
 
 @media all and (max-width: 480px) {
   .our-plays__title {
-    margin-bottom: 16px;
-    margin-top: 16px;
+    /*margin-bottom: 16px;*/
+    /*margin-top: 16px;*/
   }
 }
 
 @media screen and (max-width: 768px) {
 
   .our-plays-section {
-    padding: 16px;
+    /*padding: 16px;*/
   }
   .our-plays__title {
-    margin-top: 16px;
+    /*margin-top: 16px;*/
   }
 
   .our-plays__swiper {
-    padding: 64px 0;
+    /*padding: 64px 0;*/
   }
   .our-plays__slide.swiper-slide-active {
     /*transform: scale(1.3);*/
