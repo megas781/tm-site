@@ -46,6 +46,7 @@ header .container {
 .nav-link {
   text-decoration: none;
   position: relative;
+  color: #4568BE;
 }
 
 .nav-link::after {
@@ -54,7 +55,7 @@ header .container {
   position: absolute;
   height: 1px;
   width: 0;
-  background-color: #551a8b;
+  background-color: #4568BE;
   left: 0;
   bottom: 0;
   transition: width 0.5s;
