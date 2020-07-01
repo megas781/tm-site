@@ -1,4 +1,4 @@
-<div class="member-view" [class.invite]="member.id == 'invite'">
+<div [@fade-enter-trigger] class="member-view" [class.invite]="member.id == 'invite'">
   <a href="{{member.vkUrl}}" target="_blank" style="display: block; flex-shrink: 0">
 <!--    <div *ngIf="member.id != 'invite'; then memberCard; else invite"></div>-->
 <!--    <ng-template #memberCard>-->

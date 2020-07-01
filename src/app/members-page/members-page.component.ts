@@ -3,6 +3,7 @@ import {MemberService} from "../member.service";
 import {Member} from '../data-model/Member';
 import { Scene, ScrollMagic } from 'scrollmagiclib';
 import { TimelineLite, TweenLite } from 'gsap';
+
 @Component({
   selector: 'app-members-page',
   templateUrl: './members-page.component.html',
@@ -16,24 +17,14 @@ export class MembersPageComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     let self = this;
-    this.memberService.fetchMembers();
+    this.memberService.fetchMembers(function() {
+
+    });
+
     this.scrollCtrl = new ScrollMagic('body');
   }
   ngAfterViewInit() {
-    // const count = this.memberService.getMembers().length;
-    // console.log(`count: ${count}`);
-    // for (let i = 1; i <= count; i++) {
-    //
-    //   this.scrollCtrl.AddScenes(
-    //     new Scene(0,
-    //     0,
-    //     '.member-container__member:nth-child('+i+')',
-    //     '0.9',
-    //     false)
-    //   //.AddIndicators('Member Scene')
-    //     .setTween(TweenLite.from('.member-container__member:nth-child('+i+')', 0.5, {opacity: 0, y: -10}))
-    //   );
-    // };
+
   }
 
 }

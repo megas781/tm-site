@@ -1,5 +1,8 @@
 header {
   padding: 8px;
+  /*animation-name: fadeEnter;*/
+  /*animation-duration: 1.4s;*/
+  visibility: visible;
 }
 
 header .container {

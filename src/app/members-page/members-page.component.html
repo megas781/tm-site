@@ -1,6 +1,6 @@
 <h1 class="page-header">Участники Творческой Мастерской</h1>
 
-
+<div class="page">
   <div class="" *ngIf="memberService.peopleArray.length < 2; then loading; else content"></div>
 
   <ng-template #loading>
@@ -9,10 +9,11 @@
 
   <ng-template #content>
     <section class="members-container">
-    <app-member-view class="member-container__member" [scrollCtrl]="scrollCtrl" *ngFor="let member of memberService.peopleArray"
-                     [member]="member"></app-member-view>
+      <app-member-view class="member-container__member" [scrollCtrl]="scrollCtrl"
+                       *ngFor="let member of memberService.peopleArray"
+                       [member]="member"></app-member-view>
     </section>
     <app-join-us></app-join-us>
   </ng-template>
-
+</div>
 

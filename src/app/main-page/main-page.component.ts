@@ -23,15 +23,13 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // анимация первого блока с лого и Добро пожаловать
-    const tweenLogo = TweenLite.fromTo('.intro__image', 2.5,
-      {opacity: 0, scale: 0.95},
-      {opacity: 1, scale: 1});
-    const tweenWelcome = TweenLite.fromTo('.intro__greeting', 0.5,
-      {opacity: 0},
-      {opacity: 1});
+    const tweenLogo = TweenLite.from('.intro__image', 2.5,
+      {opacity: 0, scale: 0.95});
+    // const tweenWelcome = TweenLite.fromTo('.intro__greeting', 0.5,
+    //   {opacity: 0},
+    //   {opacity: 1});
     new TimelineLite()
-      .add(tweenLogo, 1.2)
-      .add(tweenWelcome);
+      .add(tweenLogo, 1);
   }
 
 }
