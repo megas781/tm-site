@@ -23,11 +23,13 @@
   object-fit: cover;
   border-radius: 100%;
   margin-bottom: 8px;
+  margin-right: 8px;
 }
 
 .member-view__title {
   font-size: 22px;
   text-align: center;
+  margin-bottom: 4px;
 }
 
 .member-view__subtitle {
@@ -36,9 +38,11 @@
 @media all and (max-width:  768px) {
   .member-view {
     flex-direction: row;
+    align-items: center;
   }
   .member-view__image {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 0px;
   }
 }
