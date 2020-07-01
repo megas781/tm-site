@@ -1,6 +1,7 @@
 
 .children-plays-section {
   padding: 80px 0;
+  min-height: 70vh;
 }
 .children-plays-section > .container {
   display: flex;
@@ -115,7 +116,7 @@
 }
 .children-plays__slide {
   height: 320px;
-  width: 480px;
+  /*max-width: 200px;*/
 }
 .children-plays__image {
   height: 100%;
@@ -127,9 +128,26 @@
 .children-play-name{
   text-align: center;
 }
-
+.year_mobile {
+  display: none;
+}
+.arrow-both-directions {
+  display: none;
+  width: 40px;
+  height: 12px;
+  opacity: 0.1;
+}
 @media all and (max-width: 768px) {
   .years__container {
     display: none;
+  }
+  .year_mobile {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 12px;
+  }
+  .arrow-both-directions {
+    display: block;
   }
 }

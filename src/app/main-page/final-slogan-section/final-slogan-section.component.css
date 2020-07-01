@@ -2,6 +2,7 @@
 .final-slogan-section {
   padding: 140px 0 40px;
   color: var(--red);
+  min-height: 70vh;
 }
 .final-slogan-section .container {
   display: flex;

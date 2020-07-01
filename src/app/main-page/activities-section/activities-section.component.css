@@ -1,11 +1,12 @@
 /* Section 2: ACTIVITIES */
 .activities-section {
   background-size: cover;
-  background: url("../../../assets/images/images-by-nastya/sec-2-fon.jpg") no-repeat center;
-  /*height: 100vh;*/
+  background-image: url("../../../assets/images/images-by-nastya/sec-2-fon.jpg") no-repeat center;
   color: var(--light-blue);
+  background-color: var(--purple);
   text-align: center;
   padding: 16px;
+  min-height: 70vh;
 }
 .activities__text {
 

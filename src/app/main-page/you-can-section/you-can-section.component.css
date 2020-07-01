@@ -1,6 +1,7 @@
 
 .you-can-section {
   /*overflow: hidden;*/
+  min-height: 70vh;
 }
 
 .you-can__body {

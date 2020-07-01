@@ -1,8 +1,8 @@
-<div [@fade-enter-trigger] class="member-view" [class.invite]="member.id == 'invite'">
+<div #theMemberView [@fade-enter-trigger] class="member-view m{{member.id}}" [class.invite]="member.id == 'invite'">
   <a href="{{member.vkUrl}}" target="_blank" style="display: block; flex-shrink: 0">
 <!--    <div *ngIf="member.id != 'invite'; then memberCard; else invite"></div>-->
 <!--    <ng-template #memberCard>-->
-      <img src="{{member.photoUrl}}" alt="" class="image member-view__image">
+      <img src="{{member.photoUrl}}" alt="Фото участника" class="image member-view__image">
 <!--    </ng-template>-->
 <!--    <ng-template #invite>-->
 <!--&lt;!&ndash;      <div>изображение</div>&ndash;&gt;-->
