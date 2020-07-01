@@ -1,0 +1,35 @@
+.mentor-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.mentor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.mentor-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+}
+.mentor-name-wrapper{
+  margin: 16px 0;
+}
+.mentor-surname {
+  font-size: 2rem;
+}
+.mentor-name {
+  font-size: 1.5rem;
+}
+
+.mentor-position {
+
+}

@@ -7,6 +7,7 @@ import { GalleryPageComponent } from './gallery-page/gallery-page.component';
 import { EventsPageComponent } from './events-page/events-page.component';
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 import { ContactsPageComponent } from './contacts-page/contacts-page.component';
+import {MentorsPageComponent} from './mentors-page/mentors-page.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryPageComponent},
   { path: 'members', component: MembersPageComponent},
   { path: 'portfolio', component: PortfolioPageComponent},
+  { path: 'mentors', component: MentorsPageComponent}
   ];
 
 @NgModule({
