@@ -45,4 +45,7 @@
     width: 100px;
     margin-bottom: 0px;
   }
+  .text-container {
+    width: 100%;
+  }
 }

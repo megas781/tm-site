@@ -49,16 +49,16 @@ footer .container {
   opacity: 0.5;
   display: block;
   text-align: center;
-  padding: 8px 32px 4px;
+  padding: 12px 32px 12px;
 
 
   font-size: 11px;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 .copyright a {
 
 }
-.copyright_br {
+.copyright_br_1,.copyright_br_2 {
   display: none;
 }
 
@@ -69,10 +69,16 @@ footer .container {
   .social {
     margin-top: 16px;
   }
-  .copyright_br {
+  .copyright_br_2 {
     display: inline;
   }
   .for-cooperation {
     text-align: center;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .copyright_br_1 {
+    display: inline;
   }
 }
