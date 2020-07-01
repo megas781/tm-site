@@ -116,7 +116,7 @@
 }
 .children-plays__slide {
   height: 320px;
-  /*max-width: 200px;*/
+  max-width: 480px;
 }
 .children-plays__image {
   height: 100%;

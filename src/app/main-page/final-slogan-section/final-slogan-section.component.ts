@@ -25,7 +25,7 @@ export class FinalSloganSectionComponent implements OnInit, AfterViewInit {
     const d = 0.01;
     const delay = "+=0.4";
     const timeline = new TimelineLite();
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 2; i <= 5; i++) {
       // if (i == 5) {
       //   timeline.add(TweenLite.from('.sl-' + i, d, {opacity: 0}), "-=" + d);
       // } else {

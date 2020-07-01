@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-/*@import "dinpro.css";*/
+@import "dinpro.css";
 @import "../assets/fonts/Gilroy/stylesheet.css";
 @import "style.general.css";
 @import "style.tablet.css";

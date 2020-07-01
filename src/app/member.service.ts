@@ -18,7 +18,7 @@ export class MemberService {
     let self = this;
     ajaxGet("https://spreadsheets.google.com/feeds/cells/1Bh-cfOrz5tfhlIE9UohaS0koI4TJZ5akNupkIPoDDCs/1/public/values?alt=json").subscribe(function(ajax) {
 
-      const mappings = {1: "fio", 2: "birthday", 3: "group", 4: "courseNumber", 5: "faculty", 6: "alive", 7: "photoUrl", 8:"vkUrl", 9: "position", 10: "comment"};
+      const mappings = {1: "fio", 2: "birthday", 3: "group", 4: "faculty", 5: "course", 6: "alive", 7: "photoUrl", 8:"vkUrl", 9: "position", 10: "comment"};
       let badIds = [];
 
       for (let i = 0; i < ajax.response.feed.entry.length; i++) {
@@ -57,6 +57,7 @@ export class MemberService {
         returnArray.push(value);
       })
       let you = new Member("invite");
+      you.id = "you"
       you.vkUrl = "https://vk.com/id0";
       you.photoUrl = "https://avatars.mds.yandex.net/get-zen_doc/1209363/pub_5bac51271c5a9600aa6bc22c_5bac5171584c1f00aa3dd749/scale_1200";
       you.fio = "А возможно, и ты!";

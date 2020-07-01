@@ -17,7 +17,7 @@ export class MentorsPageComponent implements OnInit, AfterViewInit {
     let mentors = document.querySelectorAll('.mentor');
     mentors.forEach(function(value, key, parent) {
       TweenLite.from(value, 1, {
-        delay: 0.7,
+        delay: 0.4,
         opacity: 0
       });
     });

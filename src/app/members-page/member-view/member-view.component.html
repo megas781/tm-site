@@ -14,5 +14,6 @@
   <div class="text-container">
     <div class="member-view__title">{{member.getName()}}</div>
     <div class="member-view__subtitle">{{member.position}}</div>
+    <div class="member-view__status" *ngIf="member.id != 'you'">{{member.faculty}}, группа {{member.group}}, {{member.course}}</div>
   </div>
 </div>
