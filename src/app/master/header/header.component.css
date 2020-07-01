@@ -3,13 +3,13 @@ header {
   /*animation-name: fadeEnter;*/
   /*animation-duration: 1.4s;*/
   visibility: visible;
+
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 
@@ -41,8 +41,8 @@ header .container {
   position: absolute;
   top: 2px;
   right: -12px;
-  background: url("../../../assets/images/external-link-icon.svg");
   background-size: cover;
+  background-image: url("../../../assets/images/external-link-icon.svg");
   background-repeat: no-repeat;
 }
 
@@ -73,12 +73,15 @@ header .container {
   height: 35px;
   width: 35px;
   position: absolute;
-  top: 4px;
+  top: 8px;
   cursor: pointer;
-  right: 8px;
+  right: 12px;
   background-image: url(../../../assets/images/burger.svg);
   background-size: 35px;
   background-repeat: no-repeat;
+}
+.close-mobile-menu-button {
+  /*display: none;*/
 }
 @media (max-width: 768px) {
   header .container {
@@ -86,11 +89,26 @@ header .container {
     justify-content: flex-start;
     align-items: center;
   }
+
+
   .nav {
     flex-direction: column;
-    justify-content: flex-start;
-    width: 94%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(69, 104, 190, 0.9);
+    transition: 0.2s opacity;
   }
+  .mobileNavHidden {
+    pointer-events: none;
+    opacity: 0;
+  }
+
 
   .burger-button {
     display: block;
@@ -98,14 +116,34 @@ header .container {
   .nav-link {
     display: block;
     padding: 8px 6px;
+    color: white;
+    font-size: 1.4rem;
   }
   .nav-link::after {
     display: none;
+
   }
   .nav-item:not(:last-child) {
-    border-bottom: 1px solid darkblue;
+    border-bottom: 1px solid white;
   }
-  .nav.mobileNavHide {
-    display: none;
+  .external::after {
+    background-image: url("../../../assets/images/external-link-icon-white.svg");
   }
+
+  .close-mobile-menu-button {
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    top: 8px;
+    cursor: pointer;
+    right: 12px;
+    display: block;
+    /*background-color: red;*/
+    background-image: url(../../../assets/images/close.svg);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
 }
