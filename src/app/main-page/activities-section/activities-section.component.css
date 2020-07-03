@@ -1,7 +1,9 @@
 /* Section 2: ACTIVITIES */
 .activities-section {
   background-size: cover;
-  background-image: url("../../../assets/images/images-by-nastya/sec-2-fon.jpg") no-repeat center;
+  background-image: url("../../../assets/images/images-by-nastya/sec-2-fon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   color: var(--light-blue);
   background-color: var(--purple);
   text-align: center;

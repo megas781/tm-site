@@ -20,13 +20,13 @@ header .container {
 
 .logo__image {
   display: block;
-  max-height: 42px;
+  height: 42px;
   margin-right: 8px;
   /*width: 140px;*/
 }
 
 .logo__text-image {
-  max-height: 42px;
+  height: 42px;
   margin-left: 8px;
 }
 
@@ -100,7 +100,7 @@ header .container {
   /*display: none;*/
 }
 
-@media (max-width: 840px) {
+@media (max-width: 870px) {
   header .container {
     flex-direction: column;
     justify-content: flex-start;
@@ -170,7 +170,7 @@ header .container {
 
 }
 
-@media all and (max-width: 840px) and (min-width: 769px) {
+@media all and (max-width: 870px) and (min-width: 769px) {
   .logo__image {
     display: none;
   }
