@@ -1,19 +1,46 @@
 import {Component, OnInit} from '@angular/core';
 import {TimelineLite, TweenLite} from 'gsap';
 import {animate, keyframes, state, style, transition, trigger} from '@angular/animations';
-import {ActivatedRoute, Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 
+const duration = '0.3s linear'
+const transactionIn = transition('hidden => shown', animate(duration));
+const transactionOut = transition('shown => hidden', animate(duration));
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   animations: [
+
+
+
+    trigger('image-logo', [
+      transactionIn,
+      transactionOut,
+      state('shown', style({
+        opacity: 1,
+      })),
+      state('hidden', style({
+        opacity: 0,
+      })),
+    ]),
+    trigger('text-logo', [
+      transactionIn,
+      transactionOut,
+      state('shown', style({
+        opacity: 1,
+      })),
+      state('hidden', style({
+        opacity: 0,
+      })),
+    ]),
+
     trigger('header', [
-      transition(':enter', animate('1.0s', keyframes([
+      transition(':enter', animate('0.8s', keyframes([
         style({opacity: 0}),
         style({opacity: 1})
       ])))
-    ])
+    ]),
   ]
 })
 export class HeaderComponent implements OnInit {
@@ -23,17 +50,27 @@ export class HeaderComponent implements OnInit {
 
   //костыль
   currentPath = '';
+  imageLogoState = '';
+  textLogoState = '';
 
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) {}
 
   ngOnInit() {
+
     this.theWindow = window;
     let self = this;
     this.router.events.subscribe(function(value) {
       if (value['url'] != undefined && value != null && value['url'] != undefined && value['url'] != null) {
         self.currentPath = String(value['url']);
-        // console.log(self.currentPath);
+        if (value instanceof NavigationEnd) {
+          if (self.currentPath == '/') {
+            self.imageLogoState = 'shown';
+            self.textLogoState = 'hidden';
+          } else {
+            self.imageLogoState = 'hidden';
+            self.textLogoState = 'shown';
+          }
+        }
       }
     });
   }

@@ -3,7 +3,8 @@
     <div class="logo">
       <a class="logo__link-wrapper" routerLink="/">
         <img class="logo__image"
-             *ngIf="this.currentPath == '/'"
+             [@image-logo]="imageLogoState"
+
              src="assets/images/logo-mini.png"
              alt="Логотип">
 <!--        <img class="logo__text-image image" *ngIf="true" src="../../../assets/images/text-red-logo-micro.png" alt="Творческая Мастерская">-->
@@ -11,9 +12,12 @@
 <!--          <div class="tm-text-logo_t">ТВОРЧЕСКАЯ</div>-->
 <!--          <div class="tm-text-logo_m">МАСТЕРСКАЯ</div>-->
 <!--        </div>-->
-        <img *ngIf="this.currentPath != '/'" class="tm-text-logo"
-             class="image logo__text-image"
-             src="../../../assets/images/text-red-logo-micro.png"
+      </a>
+      <a routerLink="/" class="logo__link-wrapper">
+        <img
+             [@text-logo]="textLogoState"
+             class="logo__text-image"
+             src="assets/images/text-red-logo-micro.png"
              alt="Творческая Мастерская">
       </a>
     </div>

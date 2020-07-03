@@ -10,24 +10,40 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+}
+
+.logo {
+  position: relative;
+  height: 42px;
+  width: 106px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo__link-wrapper {
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 42px;
+  position: absolute;
+  margin: 0 auto;
+  /*left: 0;*/
+  /*top: 0;*/
 }
 
 .logo__image {
   display: block;
   height: 42px;
-  margin-right: 8px;
+  /*margin-right: 8px;*/
   /*width: 140px;*/
 }
 
 .logo__text-image {
   height: 42px;
-  margin-left: 8px;
+  /*margin-left: 8px;*/
 }
 
 
@@ -46,9 +62,6 @@ header .container {
   margin-right: 26px;
 }
 
-.logo__link-wrapper {
-  text-decoration: none;
-}
 .external::after {
   content: '';
   height: 8px;
@@ -171,7 +184,7 @@ header .container {
 }
 
 @media all and (max-width: 870px) and (min-width: 769px) {
-  .logo__image {
-    display: none;
-  }
+  /*.logo__image {*/
+  /*  display: none;*/
+  /*}*/
 }
