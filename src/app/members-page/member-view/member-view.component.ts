@@ -1,8 +1,7 @@
-import {AfterViewChecked, AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {Member} from '../../data-model/Member';
 import { Scene, ScrollMagic } from 'scrollmagiclib';
 import { TweenLite } from 'gsap';
-import {trigger, transition, animate, state, style, keyframes} from '@angular/animations';
 import {enterAnimationTrigger} from '../../animations';
 @Component({
   selector: 'app-member-view',
@@ -25,7 +24,7 @@ export class MemberViewComponent implements OnInit, AfterViewInit {
 
   }
   ngAfterViewInit() {
-    if (Number(this.member.id) > 20) {
+    if (Number(this.member.id) > 20 || this.member.id == 'you' /*-1 - это для "давай с нами"*/) {
       let scene = new Scene(0,0, `.member-view.m${this.member.id}`, 0.8, false);
       scene.setTween(TweenLite.from(`.member-view.m${this.member.id}`, 0.5, {opacity: 0.3, delay: Math.random()/8}));
       this.scrollCtrl.AddScenes(scene);
