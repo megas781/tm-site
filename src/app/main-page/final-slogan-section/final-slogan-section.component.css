@@ -19,22 +19,10 @@
 /*.sl-1 {*/
 
 /*}*/
+.sl-1 {
+  font-size: 2.4rem;
+}
 
-.finals-logan__tm {
-  text-align: center;
-  font-family: "DIN Pro Condensed", sans-serif;
-  font-size: 3rem;
-  transform: scaleX(1.1) scaleY(0.95);
-}
-.finals-logan__tm_t {
-  color: var(--red);
-  padding: 0 2px;
-}
-.finals-logan__tm_m {
-  background-color: var(--red);
-  color: white;
-  padding: 0 4px;
-}
 .sl-2 {
   font-style: italic;
   font-size: 52px;

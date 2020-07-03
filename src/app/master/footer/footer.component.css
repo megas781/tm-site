@@ -81,4 +81,7 @@ footer .container {
   .copyright_br_1 {
     display: inline;
   }
+  .social {
+    font-size: 0.8rem;
+  }
 }

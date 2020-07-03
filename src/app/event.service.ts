@@ -58,7 +58,7 @@ export class EventService {
         //Устанавливаем значение
         self.events.get(id)[fieldName] = cell.content.$t;
       }
-      console.log(self.events);
+      // console.log(self.events);
       if (callback) {
         callback();
       }

@@ -105,3 +105,23 @@ a:hover {
   display: block;
 }
 
+
+
+.tm-text-logo {
+  text-align: center;
+  font-family: "DIN Pro Condensed", sans-serif;
+  font-size: 1.2rem;
+  transform: scaleX(1.1) scaleY(0.95);
+
+}
+.tm-text-logo_t {
+  color: var(--red);
+  padding: 0 2px;
+}
+.tm-text-logo_m {
+  background-color: var(--red);
+  color: white;
+  padding: 0 4px;
+  text-decoration: none;
+}
+

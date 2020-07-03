@@ -1,21 +1,27 @@
 <header @header>
   <div class="container">
     <div class="logo">
-      <a routerLink="/">
-        <img class="logo__image" src="assets/images/logo-mini.png" alt="Логотип">
+      <a class="logo__link-wrapper" routerLink="/">
+        <img class="logo__image" *ngIf="this.currentPath == '/'" src="assets/images/logo-mini.png" alt="Логотип">
+<!--        <img class="logo__text-image image" *ngIf="true" src="../../../assets/images/text-red-logo-micro.png" alt="Творческая Мастерская">-->
+        <div *ngIf="this.currentPath != '/'" class="tm-text-logo">
+          <div class="tm-text-logo_t">ТВОРЧЕСКАЯ</div>
+          <div class="tm-text-logo_m">МАСТЕРСКАЯ</div>
+        </div>
       </a>
     </div>
     <div class="burger-button" (click)="burgerButtonTapped()"></div>
     <div class="nav" (click)="closeButtonTapped()" [class.mobileNavHidden]="shouldHideMobileNav">
-      <div class="nav-item"><a routerLink="" target="_top" class="nav-link">Главная</a></div>
+      <div class="nav-item"><a routerLink="" class="nav-link">Главная</a></div>
       <!--      <div class="nav-item"><a routerLink="about" class="nav-link">О нас</a></div>-->
-      <div class="nav-item"><a routerLink="events" target="_top" class="nav-link">Афиша</a></div>
+      <div class="nav-item"><a routerLink="events" class="nav-link">Афиша</a></div>
       <!--      <div class="nav-item"><a routerLink="gallery" class="nav-link">Галерея</a></div>-->
-      <div class="nav-item"><a routerLink="mentors" target="_top" class="nav-link">Руководители</a></div>
-      <div class="nav-item"><a routerLink="members" target="_top" class="nav-link">Участники</a></div>
+      <div class="nav-item"><a routerLink="mentors" class="nav-link">Руководители</a></div>
+      <div class="nav-item"><a routerLink="teachers" class="nav-link">Педагоги</a></div>
+      <div class="nav-item"><a routerLink="members" class="nav-link">Участники</a></div>
       <div class="nav-item external"><a href="https://vk.com/tm_mospolytech" target="_blank" class="nav-link">Группа
         ВК</a></div>
-      <div class="nav-item"><a routerLink="contacts" target="_top" class="nav-link">Контакты</a></div>
+      <div class="nav-item"><a routerLink="contacts" class="nav-link">Контакты</a></div>
       <div class="close-mobile-menu-button" (click)="closeButtonTapped()"></div>
     </div>
   </div>

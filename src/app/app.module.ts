@@ -24,6 +24,7 @@ import { JoinUsComponent } from './reusable-modules/join-us/join-us.component';
 import { LoadingComponent } from './reusable-modules/loading/loading.component';
 import { EventListComponent } from './events-page/event-list/event-list.component';
 import { MentorsPageComponent } from './mentors-page/mentors-page.component';
+import {TeachersPageComponent} from './teachers-page/teachers-page.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { MentorsPageComponent } from './mentors-page/mentors-page.component';
     JoinUsComponent,
     LoadingComponent,
     EventListComponent,
-    MentorsPageComponent
+    MentorsPageComponent,
+    TeachersPageComponent
   ],
   imports: [
     BrowserModule,

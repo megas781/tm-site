@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TimelineLite, TweenLite} from 'gsap';
 import {animate, keyframes, state, style, transition, trigger} from '@angular/animations';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -17,15 +18,24 @@ import {animate, keyframes, state, style, transition, trigger} from '@angular/an
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() {
-  }
-
   theWindow: Window;
   shouldHideMobileNav: boolean = true;
 
+  //костыль
+  currentPath = '';
+
+  constructor(private router: Router) {
+  }
+
   ngOnInit() {
     this.theWindow = window;
-    console.log('thewindow: ' + window);
+    let self = this;
+    this.router.events.subscribe(function(value) {
+      if (value['url'] != undefined && value != null && value['url'] != undefined && value['url'] != null) {
+        self.currentPath = String(value['url']);
+        // console.log(self.currentPath);
+      }
+    });
   }
 
   burgerButtonTapped() {
