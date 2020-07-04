@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .member-view.invite .invite-image-container {
@@ -30,26 +29,23 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 240px;
+  text-align: center;
 }
 
 .member-view__title {
   font-size: 1.4rem;
-
   margin-bottom: 4px;
 }
 
 .member-view__subtitle {
-
 }
 .member-view__group {
   font-size: 0.8rem;
 }
 .member-view__status {
-  margin-top: 8px;
   font-size: 0.8rem;
-  max-width: 240px;
+  margin: 8px auto 0;
+  text-align: center;
 }
 
 
@@ -66,5 +62,15 @@
   }
   .text-container {
     width: 100%;
+    text-align: right;
+  }
+  .member-view__title {
+
+  }
+  .member-view__subtitle {
+
+  }
+  .member-view__status {
+    text-align: left;
   }
 }

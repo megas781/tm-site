@@ -1,8 +1,8 @@
 .members-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
-  grid-row-gap: 32px;
+  grid-gap: 32px 16px;
   margin-bottom: 60px;
-
+  padding: 0 16px;
 }

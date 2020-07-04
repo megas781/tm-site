@@ -12,8 +12,8 @@
 <!--    </ng-template>-->
   </a>
   <div class="text-container">
-    <div class="member-view__title">{{ member.id != 'you' ? member.getName() : member.fio}}</div>
+    <div class="member-view__title">{{ member.id != 'you' && member.fio != 'Выонг Виет Тхань' ? member.getName() : member.fio}}</div>
     <div class="member-view__subtitle">{{member.position}}</div>
-    <div class="member-view__status" *ngIf="member.id != 'you'">{{member.faculty}}, группа {{member.group}}, {{member.course}}</div>
   </div>
 </div>
+<div class="member-view__status" *ngIf="member.id != 'you'">{{member.faculty}}, группа {{member.group}}, {{member.course}}</div>

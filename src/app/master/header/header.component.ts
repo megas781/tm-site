@@ -73,6 +73,12 @@ export class HeaderComponent implements OnInit {
         }
       }
     });
+
+    document.querySelectorAll('.nav-link').forEach(function(linkElement) {
+      linkElement.addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'auto'});
+      });
+    });
   }
 
   burgerButtonTapped() {
