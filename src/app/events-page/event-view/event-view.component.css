@@ -3,7 +3,8 @@
   margin: 20px 0;
   align-items: flex-start;
 }
-
+.event-view__image-container {
+}
 .event-view__image {
   max-width: 240px;
 }
@@ -15,12 +16,12 @@
 
 .event-view__title {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 1.1rem;
   margin-top: 5px;
 }
 
 .event-view__text {
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 140%;
 }
 
@@ -31,7 +32,8 @@
 @media all and (max-width: 590px) {
   .event-view {
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    align-items: center;
   }
 
   .event-view__image-container {
@@ -40,6 +42,7 @@
 
   .event-view__image {
     max-width: 90%;
+    max-height: 100vh;
   }
 
   .event-view__text-container {
