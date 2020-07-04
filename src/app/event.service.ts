@@ -19,6 +19,12 @@ export class EventService {
     let self = this;
     this.fetchEvents(function() {
       self.getEvents().forEach(function(value, index, array) {
+
+        //Каждое у каждого мероприятия нужно сделать небольшую обработку описания
+        value.text = value.text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+
+
         if (value.getDate() > new Date()) {
           self.upcomingEvents.push(value);
         } else {

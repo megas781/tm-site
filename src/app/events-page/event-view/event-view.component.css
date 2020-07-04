@@ -16,7 +16,7 @@
 
 .event-view__title {
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-top: 5px;
 }
 
@@ -26,10 +26,17 @@
 }
 
 .event-view__meta-info {
+  font-size: 1.05rem;
   margin-bottom: 0;
+  margin-top: 8px;
+  /*text-align: right;*/
+}
+.meta-info__label {
+  width: 100px;
+  display: inline-block;
 }
 
-@media all and (max-width: 590px) {
+@media all and (max-width: 768px) {
   .event-view {
     flex-direction: column;
     justify-content: center;
@@ -51,5 +58,8 @@
 
   .event-view__title {
     text-align: center;
+  }
+  .event-view__meta-info {
+    font-size: 1rem;
   }
 }
