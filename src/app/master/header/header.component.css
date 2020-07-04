@@ -133,12 +133,15 @@ header .container {
     z-index: 1000;
     background-color: rgba(69, 104, 190, 0.9);
     transition: 0.2s opacity;
+    opacity: 0;
+    visibility: hidden;
   }
 
-  .mobileNavHidden {
-    pointer-events: none;
-    opacity: 0;
-  }
+  /*.mobileNavVisible {*/
+  /*  pointer-events: auto;*/
+  /*  opacity: 1;*/
+  /*  visibility: visible;*/
+  /*}*/
 
 
   .burger-button {
@@ -173,6 +176,8 @@ header .container {
     cursor: pointer;
     right: 12px;
     display: block;
+    z-index: 1001;
+
     /*background-color: red;*/
     background-image: url(../../../assets/images/close.svg);
     background-size: 30px;
