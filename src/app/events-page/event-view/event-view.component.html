@@ -4,9 +4,14 @@
   </div>
   <div class="event-view__text-container">
     <h3 class="event-view__title">{{event.title}}</h3>
-    <p class="event-view__text" [innerHTML]="event.text"></p>
-    <p class="event-view__meta-info"><span class="meta-info__label">Где: </span><i style="font-weight: 400">{{event.address}},</i></p>
-    <p class="event-view__meta-info"><span class="meta-info__label">Когда: </span><i style="font-weight: 400">{{event.getDateString()}},</i></p>
-    <p class="event-view__meta-info"><span class="meta-info__label">Во сколько: </span><i style="font-weight: 400">{{event.time}}</i></p>
+    <div class="expanding-mecha {{this.isTextRevealed ? 'expanded': 'collapsed'}}" #paragraphElement>
+      <p class="event-view__text"
+         [innerHTML]="event.text"></p>
+      <span class="mobile-text-expand"
+            (click)="onRevealButtonTapped()">{{this.isTextRevealed ? 'Скрыть': 'Показать полностью'}}</span>
+    </div>
+    <p class="event-view__meta-info"><span class="meta-info__label">Где:</span> <i style="font-weight: 400">{{event.address}},</i></p>
+    <p class="event-view__meta-info"><span class="meta-info__label">Когда:</span> <i style="font-weight: 400">{{event.getDateString()}},</i></p>
+    <p class="event-view__meta-info"><span class="meta-info__label">Во сколько:</span> <i style="font-weight: 400">{{event.time}}</i></p>
   </div>
 </div>
